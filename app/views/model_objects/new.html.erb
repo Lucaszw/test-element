@@ -1,0 +1,28 @@
+<%= render template: "navbar/index" %>
+<br><br>
+<h2>Ensure file the file extension is ".stl"</h2>
+<%= form_for :currentModel, url: {controller: "model_objects" ,action: "create"}, :html => { :multipart => true } do |f| %>
+
+		<%= f.label "Name of Model :"%><br>
+		<%= f.text_field :name %><br>
+
+		<%= f.label "STL File : "%><br>
+		<%= f.file_field :stlfile %><br>		
+
+		<%= f.label "Thumbnail : "%><br>
+		<%= f.file_field :thumbnail %><br>	
+
+		<%= f.label "Category : "%><br>
+		<%= f.select :category, options_for_select([["Art","Art"], ["Collectibles","Collectibles"], ["Electronics","Electronics"], ["Pets","Pets"], ["Accessories","Accessories"], ["Pottery","Pottery"], ["Sports","Sports"], ["Toys","Toys"]])%><br>
+
+		<%= f.label "Description : "%><br>
+		<%= f.text_field :description %><br>
+
+		<%= f.label "Price : (Optional) "%><br>
+		<%= f.text_field :price %><br>
+
+
+		<%= f.submit("Save Changes") %>
+
+		
+	<% end %>

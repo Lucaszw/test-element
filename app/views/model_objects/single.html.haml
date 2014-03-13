@@ -1,0 +1,51 @@
+= render template: "navbar/index"
+= stylesheet_link_tag "fancybox"
+= stylesheet_link_tag "buttons/3Dbuttons"
+
+= javascript_include_tag "model_objects/model_objects"
+
+%br
+%br
+%br
+%table{:style => "margin-left:auto;margin-right:auto;", :align => "center"}
+  %td{:style => "display: table-cell;vertical-align:middle;background-color:#f5f5f5;padding:0px 20px;"}
+    %div#thumbnail{"data-no-turbolink" => "", :style => "text-align:center;position:relative;display:block;"}
+      = link_to(model_objects_canvas_path(:modelid => @model.id), :remote => true ) do
+        = image_tag @model.thumbnail.url, :height => 250, :id => "icon"
+  
+  %td
+    .model_description
+      %h1= @model.name
+      %h3
+        Category : #{@model.category}
+      %h3
+        Submitted By : #{@modelsOwner.name}
+      %h3
+        Description : #{@model.description}
+      %br
+      %h3
+        Link to model from your website!
+      %br
+      %textarea#iframe_value{:type=>"text", :onclick => "this.select();", :style => "max-width:300px;width:300px;height:150px;", :class => "form-control"}
+        <iframe src='#{request.protocol}#{request.host_with_port}/model_objects/view?modelid=#{@model.id}' style="border:1px #000000 solid;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="600px" width="900px"></iframe>
+      %br
+      %div{:style => "display:inline-block;margin-top:10px;"}          
+        = link_to "Print" , generator_form_path(:modelid => @model.id), :class => "btn btn-primary" , :style => "float:left;padding: 3px 10px;margin-right:5px;"
+        = link_to "Add to cart" , model_objects_add_to_cart_path(:modelid => @model.id), :class => "btn btn-success" , :style => "padding: 3px 10px;"
+
+%br
+%br
+- @model.comments.each do |comment|
+  .single_comment_wrapper
+    %h1= comment.title
+    %h4= comment.username
+    %h3= comment.description
+%br
+= render template: "comments/new"
+%br
+#ajaxView
+
+:coffee
+  $(document).ready ->
+    $("#thumbnail img").click() unless self is top
+

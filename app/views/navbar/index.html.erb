@@ -1,0 +1,43 @@
+<div id="navbar">
+	<div data-no-turbolink>
+		<p class="left"><%= link_to image_tag("lani_beta_logo.svg", :size => "123x42"), {:action => 'index', :controller => 'home'} %></p>
+	</div>
+
+<!-- Search Field : -->
+	<div style="margin-top:5px;">
+		<%= form_for :search, url: model_objects_search_path do |f| %>
+			<!-- <span><%= f.label "Search :"%></span> -->
+			<span><%= f.text_field :text , :value => "Search for..."%></span>
+		<!-- 	<span><%= f.label "Name : " %></span>
+			<span><%= f.check_box :name %></span>
+			<span><%= f.label "Category : " %></span>
+			<span><%= f.check_box :category %></span> -->
+			<span><%= f.submit("Search") %></span>
+		<% end %>
+
+
+		<% if @user.id != nil %>
+
+			<p class="right"><%= @user.name %></p>
+			<p class="right"><%= link_to "Log out", controller: "navbar", action: "logout" %></p>
+			<p class="right"><%= link_to "Edit Profile", controller: "profiles", action: "edit" %></p>
+
+		<% else %>
+
+			<%= form_for @user, url: {controller: "navbar" ,action: "create"} do |f| %>
+				<%= f.label "Name :"%>
+
+				<span><%= f.text_field :name %></span>
+
+				<span><%= f.label "Password :"%></span>
+				<span><%= f.password_field :password %></span>
+
+				<span><%= f.submit("Log in") %></span>
+				<span><%= link_to "or sign up!", controller: "profiles", action: "new" %></span>
+				
+			<% end %>
+
+		<% end %>
+	</div>
+</div><!-- navbar -->
+<br><br>

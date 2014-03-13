@@ -1,0 +1,57 @@
+= stylesheet_link_tag "fancybox"
+= javascript_include_tag "model_objects/model_objects"
+
+
+#pageWrapper{:style => "min-width:1500px;"}
+  / Categories Menu :
+  %div{:style => "display:inline;"}
+    = render :controller => "model_objects", :action => "categoryList", :template => "model_objects/categoryList"
+    
+    / Gallery :
+    - i = 0
+    - k = 0
+    #gallery_container{:style => "min-width:1000px;float:left;text-align:left;padding-left:30px;margin-top:40px;"}
+      - @models.each do |model|
+        %div{:style => "display:inline-block;vertical-align: top;"}
+          %div{:id => "model_#{k}", :style => "margin: 0px 8px 8px 0px;background-color:white;padding:10px;border: 1px solid #eaeaea;"}
+            %div{"data-no-turbolink" => ""}
+              = link_to(model_objects_canvas_path(:modelid => model.id), :remote => true ) do
+                = image_tag model.thumbnail.url, :id => "#{model.id}", :style => "width:205px;", :class => "model_image"
+              %div{"data-no-turbolink" => ""}
+                %h3= link_to model.name, model_objects_single_path(:id => model.id)
+        - i += 1
+        - k += 1
+        - if i == 4
+          - i = 0
+          %br
+
+
+:coffee
+  $(window).bind "load", ->
+    first = 4
+    last = #{k};
+    i = first
+    while i < last
+      element1 = document.getElementById("model_" + parseInt(i - 4))
+      element2 = document.getElementById("model_" + i)
+      top_margin = (element1.offsetTop + element1.offsetHeight) - element2.offsetTop + 10
+      $("#model_" + i).css "margin-top", top_margin
+      i++
+
+:css
+  table {
+    width: 20%;
+    float:left;
+  }
+  .table_inner {
+    background-color:white;
+    padding:2px;
+  }
+  #td_top {
+    width: 200px;
+    min-height: 10px;
+  }
+
+#ajaxView
+
+

@@ -1,0 +1,20 @@
+<%= render template: "navbar/index" %>
+
+<h1>Edit : </h1>
+
+
+
+<%= form_for @user, url: {controller: "profiles" ,action: "update"} do |f| %>
+		<%= f.label "Name :"%>
+		<%= f.text_field :name %>
+
+		<%= f.label "Password :"%>
+		<%= f.password_field :password %>
+
+		<%= f.submit("Save Changes") %>
+
+		
+	<% end %>
+
+<%= link_to "Create New Model", controller: "model_objects", action: "new" %>
+<%= render file: "model_objects/galleryView" %>

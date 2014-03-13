@@ -1,0 +1,85 @@
+// Place all the styles related to the navbar controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#navbar {
+	min-width:800px;
+
+	background-color: #ffffff;
+	color:#303030;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	color: #585858;
+	position: fixed;
+	font-family: "Helvetica Narrow","Arial Narrow",Tahoma,Arial,Helvetica,sans-serif;
+	top:0px;
+	width: 100%;
+	border-bottom:1px solid #eeeeee;
+	font-size :15px;
+	a{
+		font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		font-size: 14px;
+		color:#13a1fd;
+		font-weight: 500;
+	}
+	p {
+		margin-left:5px;
+		margin-right:5px;
+		margin: 4px;
+		
+	}
+	p.right {
+		float:right;
+	}
+	p.left {
+		float:left;
+		margin-left:10px;
+		margin-top: 7px;
+	}
+	img {
+		margin-top: -10px;
+	}
+}
+form {
+	display: inline;
+}
+
+
+#user_name, #user_password {
+	width:100px;
+	background-color:#ffffff;
+
+	border: 1px solid #e3e3e3;
+	text-align:center;
+}
+input, select {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: none;
+	padding:5px 20px;
+}
+select {
+	width: 191px;
+}
+input[type="submit"] {
+	background-color: #f2f2f2;
+	border: 1px solid #ebebeb;
+}
+#search_text {
+		border: 1px solid #ebebeb;
+		background: #ffffff; /* Old browsers */
+		color: #d8d8d8;
+		&:focus {
+			outline:0px !important;
+    -webkit-appearance:none;
+			color:#4783c3;
+			-webkit-box-shadow: 0px 0px 3px 0px #c6ddea;
+-moz-box-shadow:    0px 0px 3px 0px #c6ddea;
+box-shadow:         0px 0px 3px 0px #c6ddea;
+border-color: #4783c3;
+		}
+}
