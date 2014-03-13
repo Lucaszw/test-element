@@ -94408,3 +94408,2790 @@ Processing by HomeController#index as HTML
   Rendered model_objects/galleryView.html.haml (296.2ms)
   Rendered home/index.html.erb within layouts/application (329.9ms)
 Completed 200 OK in 454ms (Views: 366.4ms | ActiveRecord: 53.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-12 18:48:45 -0600
+
+Mysql2::Error (Can't connect to local MySQL server through socket '/Applications/MAMP/tmp/mysql/mysql.sock' (2)):
+  mysql2 (0.3.15) lib/mysql2/client.rb:67:in `connect'
+  mysql2 (0.3.15) lib/mysql2/client.rb:67:in `initialize'
+  activerecord (4.0.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
+  activerecord (4.0.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:440:in `new_connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:450:in `checkout_new_connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:421:in `acquire_connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:356:in `block in checkout'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `checkout'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:546:in `retrieve_connection'
+  activerecord (4.0.0) lib/active_record/connection_handling.rb:79:in `retrieve_connection'
+  activerecord (4.0.0) lib/active_record/connection_handling.rb:53:in `connection'
+  activerecord (4.0.0) lib/active_record/migration.rb:792:in `current_version'
+  activerecord (4.0.0) lib/active_record/migration.rb:800:in `needs_migration?'
+  activerecord (4.0.0) lib/active_record/migration.rb:379:in `check_pending!'
+  activerecord (4.0.0) lib/active_record/migration.rb:366:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__1567389719390502479__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (46.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-12 18:48:46 -0600
+
+Mysql2::Error (Can't connect to local MySQL server through socket '/Applications/MAMP/tmp/mysql/mysql.sock' (2)):
+  mysql2 (0.3.15) lib/mysql2/client.rb:67:in `connect'
+  mysql2 (0.3.15) lib/mysql2/client.rb:67:in `initialize'
+  activerecord (4.0.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
+  activerecord (4.0.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:440:in `new_connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:450:in `checkout_new_connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:421:in `acquire_connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:356:in `block in checkout'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `checkout'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:546:in `retrieve_connection'
+  activerecord (4.0.0) lib/active_record/connection_handling.rb:79:in `retrieve_connection'
+  activerecord (4.0.0) lib/active_record/connection_handling.rb:53:in `connection'
+  activerecord (4.0.0) lib/active_record/migration.rb:792:in `current_version'
+  activerecord (4.0.0) lib/active_record/migration.rb:800:in `needs_migration?'
+  activerecord (4.0.0) lib/active_record/migration.rb:379:in `check_pending!'
+  activerecord (4.0.0) lib/active_record/migration.rb:366:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__1567389719390502479__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-12 18:49:11 -0600
+
+Mysql2::Error (Can't connect to local MySQL server through socket '/Applications/MAMP/tmp/mysql/mysql.sock' (2)):
+  mysql2 (0.3.15) lib/mysql2/client.rb:67:in `connect'
+  mysql2 (0.3.15) lib/mysql2/client.rb:67:in `initialize'
+  activerecord (4.0.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
+  activerecord (4.0.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:440:in `new_connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:450:in `checkout_new_connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:421:in `acquire_connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:356:in `block in checkout'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `checkout'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:546:in `retrieve_connection'
+  activerecord (4.0.0) lib/active_record/connection_handling.rb:79:in `retrieve_connection'
+  activerecord (4.0.0) lib/active_record/connection_handling.rb:53:in `connection'
+  activerecord (4.0.0) lib/active_record/migration.rb:792:in `current_version'
+  activerecord (4.0.0) lib/active_record/migration.rb:800:in `needs_migration?'
+  activerecord (4.0.0) lib/active_record/migration.rb:379:in `check_pending!'
+  activerecord (4.0.0) lib/active_record/migration.rb:366:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__1567389719390502479__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-12 18:49:13 -0600
+
+Mysql2::Error (Can't connect to local MySQL server through socket '/Applications/MAMP/tmp/mysql/mysql.sock' (2)):
+  mysql2 (0.3.15) lib/mysql2/client.rb:67:in `connect'
+  mysql2 (0.3.15) lib/mysql2/client.rb:67:in `initialize'
+  activerecord (4.0.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
+  activerecord (4.0.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:440:in `new_connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:450:in `checkout_new_connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:421:in `acquire_connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:356:in `block in checkout'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `checkout'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:546:in `retrieve_connection'
+  activerecord (4.0.0) lib/active_record/connection_handling.rb:79:in `retrieve_connection'
+  activerecord (4.0.0) lib/active_record/connection_handling.rb:53:in `connection'
+  activerecord (4.0.0) lib/active_record/migration.rb:792:in `current_version'
+  activerecord (4.0.0) lib/active_record/migration.rb:800:in `needs_migration?'
+  activerecord (4.0.0) lib/active_record/migration.rb:379:in `check_pending!'
+  activerecord (4.0.0) lib/active_record/migration.rb:366:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__1567389719390502479__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-12 18:49:13 -0600
+
+Mysql2::Error (Can't connect to local MySQL server through socket '/Applications/MAMP/tmp/mysql/mysql.sock' (2)):
+  mysql2 (0.3.15) lib/mysql2/client.rb:67:in `connect'
+  mysql2 (0.3.15) lib/mysql2/client.rb:67:in `initialize'
+  activerecord (4.0.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
+  activerecord (4.0.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:440:in `new_connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:450:in `checkout_new_connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:421:in `acquire_connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:356:in `block in checkout'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `checkout'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:546:in `retrieve_connection'
+  activerecord (4.0.0) lib/active_record/connection_handling.rb:79:in `retrieve_connection'
+  activerecord (4.0.0) lib/active_record/connection_handling.rb:53:in `connection'
+  activerecord (4.0.0) lib/active_record/migration.rb:792:in `current_version'
+  activerecord (4.0.0) lib/active_record/migration.rb:800:in `needs_migration?'
+  activerecord (4.0.0) lib/active_record/migration.rb:379:in `check_pending!'
+  activerecord (4.0.0) lib/active_record/migration.rb:366:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__1567389719390502479__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-12 18:49:14 -0600
+
+Mysql2::Error (Can't connect to local MySQL server through socket '/Applications/MAMP/tmp/mysql/mysql.sock' (2)):
+  mysql2 (0.3.15) lib/mysql2/client.rb:67:in `connect'
+  mysql2 (0.3.15) lib/mysql2/client.rb:67:in `initialize'
+  activerecord (4.0.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
+  activerecord (4.0.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:440:in `new_connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:450:in `checkout_new_connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:421:in `acquire_connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:356:in `block in checkout'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `checkout'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:546:in `retrieve_connection'
+  activerecord (4.0.0) lib/active_record/connection_handling.rb:79:in `retrieve_connection'
+  activerecord (4.0.0) lib/active_record/connection_handling.rb:53:in `connection'
+  activerecord (4.0.0) lib/active_record/migration.rb:792:in `current_version'
+  activerecord (4.0.0) lib/active_record/migration.rb:800:in `needs_migration?'
+  activerecord (4.0.0) lib/active_record/migration.rb:379:in `check_pending!'
+  activerecord (4.0.0) lib/active_record/migration.rb:366:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__1567389719390502479__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-12 18:49:14 -0600
+
+Mysql2::Error (Can't connect to local MySQL server through socket '/Applications/MAMP/tmp/mysql/mysql.sock' (2)):
+  mysql2 (0.3.15) lib/mysql2/client.rb:67:in `connect'
+  mysql2 (0.3.15) lib/mysql2/client.rb:67:in `initialize'
+  activerecord (4.0.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
+  activerecord (4.0.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:440:in `new_connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:450:in `checkout_new_connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:421:in `acquire_connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:356:in `block in checkout'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `checkout'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:546:in `retrieve_connection'
+  activerecord (4.0.0) lib/active_record/connection_handling.rb:79:in `retrieve_connection'
+  activerecord (4.0.0) lib/active_record/connection_handling.rb:53:in `connection'
+  activerecord (4.0.0) lib/active_record/migration.rb:792:in `current_version'
+  activerecord (4.0.0) lib/active_record/migration.rb:800:in `needs_migration?'
+  activerecord (4.0.0) lib/active_record/migration.rb:379:in `check_pending!'
+  activerecord (4.0.0) lib/active_record/migration.rb:366:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__1567389719390502479__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-12 18:49:14 -0600
+
+Mysql2::Error (Can't connect to local MySQL server through socket '/Applications/MAMP/tmp/mysql/mysql.sock' (2)):
+  mysql2 (0.3.15) lib/mysql2/client.rb:67:in `connect'
+  mysql2 (0.3.15) lib/mysql2/client.rb:67:in `initialize'
+  activerecord (4.0.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
+  activerecord (4.0.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:440:in `new_connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:450:in `checkout_new_connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:421:in `acquire_connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:356:in `block in checkout'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `checkout'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:546:in `retrieve_connection'
+  activerecord (4.0.0) lib/active_record/connection_handling.rb:79:in `retrieve_connection'
+  activerecord (4.0.0) lib/active_record/connection_handling.rb:53:in `connection'
+  activerecord (4.0.0) lib/active_record/migration.rb:792:in `current_version'
+  activerecord (4.0.0) lib/active_record/migration.rb:800:in `needs_migration?'
+  activerecord (4.0.0) lib/active_record/migration.rb:379:in `check_pending!'
+  activerecord (4.0.0) lib/active_record/migration.rb:366:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__1567389719390502479__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-12 18:49:14 -0600
+
+Mysql2::Error (Can't connect to local MySQL server through socket '/Applications/MAMP/tmp/mysql/mysql.sock' (2)):
+  mysql2 (0.3.15) lib/mysql2/client.rb:67:in `connect'
+  mysql2 (0.3.15) lib/mysql2/client.rb:67:in `initialize'
+  activerecord (4.0.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
+  activerecord (4.0.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:440:in `new_connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:450:in `checkout_new_connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:421:in `acquire_connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:356:in `block in checkout'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `checkout'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:546:in `retrieve_connection'
+  activerecord (4.0.0) lib/active_record/connection_handling.rb:79:in `retrieve_connection'
+  activerecord (4.0.0) lib/active_record/connection_handling.rb:53:in `connection'
+  activerecord (4.0.0) lib/active_record/migration.rb:792:in `current_version'
+  activerecord (4.0.0) lib/active_record/migration.rb:800:in `needs_migration?'
+  activerecord (4.0.0) lib/active_record/migration.rb:379:in `check_pending!'
+  activerecord (4.0.0) lib/active_record/migration.rb:366:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__1567389719390502479__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-12 18:49:14 -0600
+
+Mysql2::Error (Can't connect to local MySQL server through socket '/Applications/MAMP/tmp/mysql/mysql.sock' (2)):
+  mysql2 (0.3.15) lib/mysql2/client.rb:67:in `connect'
+  mysql2 (0.3.15) lib/mysql2/client.rb:67:in `initialize'
+  activerecord (4.0.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
+  activerecord (4.0.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:440:in `new_connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:450:in `checkout_new_connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:421:in `acquire_connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:356:in `block in checkout'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `checkout'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:546:in `retrieve_connection'
+  activerecord (4.0.0) lib/active_record/connection_handling.rb:79:in `retrieve_connection'
+  activerecord (4.0.0) lib/active_record/connection_handling.rb:53:in `connection'
+  activerecord (4.0.0) lib/active_record/migration.rb:792:in `current_version'
+  activerecord (4.0.0) lib/active_record/migration.rb:800:in `needs_migration?'
+  activerecord (4.0.0) lib/active_record/migration.rb:379:in `check_pending!'
+  activerecord (4.0.0) lib/active_record/migration.rb:366:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__1567389719390502479__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-12 18:49:14 -0600
+
+Mysql2::Error (Can't connect to local MySQL server through socket '/Applications/MAMP/tmp/mysql/mysql.sock' (2)):
+  mysql2 (0.3.15) lib/mysql2/client.rb:67:in `connect'
+  mysql2 (0.3.15) lib/mysql2/client.rb:67:in `initialize'
+  activerecord (4.0.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
+  activerecord (4.0.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:440:in `new_connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:450:in `checkout_new_connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:421:in `acquire_connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:356:in `block in checkout'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `checkout'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:546:in `retrieve_connection'
+  activerecord (4.0.0) lib/active_record/connection_handling.rb:79:in `retrieve_connection'
+  activerecord (4.0.0) lib/active_record/connection_handling.rb:53:in `connection'
+  activerecord (4.0.0) lib/active_record/migration.rb:792:in `current_version'
+  activerecord (4.0.0) lib/active_record/migration.rb:800:in `needs_migration?'
+  activerecord (4.0.0) lib/active_record/migration.rb:379:in `check_pending!'
+  activerecord (4.0.0) lib/active_record/migration.rb:366:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__1567389719390502479__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-12 18:49:19 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (2.9ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomeController#index as HTML
+  Rendered navbar/index.html.erb (63.2ms)
+  Rendered model_objects/categoryList.html.haml (3.6ms)
+  [1m[35mUserModel Load (2.5ms)[0m  SELECT `user_models`.* FROM `user_models`
+  Rendered model_objects/galleryView.html.haml (360.3ms)
+  Rendered home/index.html.erb within layouts/application (425.6ms)
+Completed 200 OK in 596ms (Views: 561.1ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-12 18:49:20 -0600
+
+
+Started GET "/assets/begin.css?body=1" for 127.0.0.1 at 2014-03-12 18:49:20 -0600
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-12 18:49:20 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-12 18:49:20 -0600
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-12 18:49:20 -0600
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-12 18:49:20 -0600
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2014-03-12 18:49:20 -0600
+
+
+Started GET "/assets/buttons/reset.css?body=1" for 127.0.0.1 at 2014-03-12 18:49:20 -0600
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-12 18:49:20 -0600
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-03-12 18:49:20 -0600
+
+
+Started GET "/assets/edit.css?body=1" for 127.0.0.1 at 2014-03-12 18:49:20 -0600
+
+
+Started GET "/assets/fancybox.css?body=1" for 127.0.0.1 at 2014-03-12 18:49:20 -0600
+
+
+Started GET "/assets/generator.css?body=1" for 127.0.0.1 at 2014-03-12 18:49:20 -0600
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-03-12 18:49:20 -0600
+
+
+Started GET "/assets/model_objects.css?body=1" for 127.0.0.1 at 2014-03-12 18:49:20 -0600
+
+
+Started GET "/assets/navbar.css?body=1" for 127.0.0.1 at 2014-03-12 18:49:20 -0600
+
+
+Started GET "/assets/profiles.css?body=1" for 127.0.0.1 at 2014-03-12 18:49:20 -0600
+
+
+Started GET "/assets/userfiles.css?body=1" for 127.0.0.1 at 2014-03-12 18:49:20 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-03-12 18:49:20 -0600
+
+
+Started GET "/assets/zohoverify.css?body=1" for 127.0.0.1 at 2014-03-12 18:49:20 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-12 18:49:20 -0600
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-03-12 18:49:20 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-12 18:49:20 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-12 18:49:20 -0600
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-12 18:49:20 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-12 18:49:20 -0600
+
+
+Started GET "/assets/model_objects/fancybox.js?body=1" for 127.0.0.1 at 2014-03-12 18:49:20 -0600
+
+
+Started GET "/assets/model_objects/easing.js?body=1" for 127.0.0.1 at 2014-03-12 18:49:20 -0600
+
+
+Started GET "/assets/model_objects/mousewheel.js?body=1" for 127.0.0.1 at 2014-03-12 18:49:20 -0600
+
+
+Started GET "/assets/model_objects/three.js?body=1" for 127.0.0.1 at 2014-03-12 18:49:20 -0600
+
+
+Started GET "/assets/model_objects/STLloader.js?body=1" for 127.0.0.1 at 2014-03-12 18:49:20 -0600
+
+
+Started GET "/assets/model_objects/TrackBallControls.js?body=1" for 127.0.0.1 at 2014-03-12 18:49:20 -0600
+
+
+Started GET "/assets/model_objects/threejsfunctions.js?body=1" for 127.0.0.1 at 2014-03-12 18:49:20 -0600
+
+
+Started GET "/assets/model_objects/model_objects.js?body=1" for 127.0.0.1 at 2014-03-12 18:49:20 -0600
+
+
+Started GET "/assets/lani_beta_logo.svg" for 127.0.0.1 at 2014-03-12 18:49:20 -0600
+
+
+Started GET "/assets/favicon.jpg" for 127.0.0.1 at 2014-03-12 18:49:22 -0600
+
+
+Started GET "/model_objects/canvas?modelid=29" for 127.0.0.1 at 2014-03-12 18:49:30 -0600
+Processing by ModelObjectsController#canvas as JS
+  Parameters: {"modelid"=>"29"}
+  [1m[36mUserModel Load (3.9ms)[0m  [1mSELECT `user_models`.* FROM `user_models` WHERE `user_models`.`id` = 29 LIMIT 1[0m
+  Rendered model_objects/_canvas.html.haml (170.0ms)
+  Rendered model_objects/canvas.js.erb (177.0ms)
+Completed 200 OK in 189ms (Views: 182.2ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/assets/fancybox_overlay.png" for 127.0.0.1 at 2014-03-12 18:49:31 -0600
+
+
+Started GET "/assets/fancybox_sprite@2x.png" for 127.0.0.1 at 2014-03-12 18:49:32 -0600
+
+
+Started GET "/model_objects/single?id=29" for 127.0.0.1 at 2014-03-12 18:49:39 -0600
+Processing by ModelObjectsController#single as HTML
+  Parameters: {"id"=>"29"}
+  [1m[35mUserModel Load (0.4ms)[0m  SELECT `user_models`.* FROM `user_models` WHERE `user_models`.`id` = 29 LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  Rendered navbar/index.html.erb (4.5ms)
+  [1m[35mComment Load (0.3ms)[0m  SELECT `comments`.* FROM `comments` WHERE `comments`.`user_model_id` = 29
+  Rendered comments/new.html.erb (0.7ms)
+  Rendered model_objects/single.html.haml within layouts/application (181.4ms)
+Completed 200 OK in 199ms (Views: 190.1ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/stylesheets/buttons/3Dbuttons.css" for 127.0.0.1 at 2014-03-12 18:49:40 -0600
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/buttons/3Dbuttons.css"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.2ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.4ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (40.4ms)
+
+
+Started GET "/generator/form?modelid=29" for 127.0.0.1 at 2014-03-12 18:49:44 -0600
+Processing by GeneratorController#form as HTML
+  Parameters: {"modelid"=>"29"}
+  [1m[36mUserModel Load (0.3ms)[0m  [1mSELECT `user_models`.* FROM `user_models` WHERE `user_models`.`id` = 29 LIMIT 1[0m
+  Rendered navbar/index.html.erb (5.1ms)
+  Rendered generator/_printer_options.html.haml (11.2ms)
+  Rendered generator/_filament_options.html.haml (4.8ms)
+  Rendered generator/_speed_options.html.haml (6.4ms)
+  Rendered generator/_acceleration_options.html.haml (3.3ms)
+  Rendered generator/_accuracy_options.html.haml (2.6ms)
+  Rendered generator/_print_options.html.haml (9.6ms)
+  Rendered generator/_support_material_options.html.haml (5.9ms)
+  Rendered generator/_retraction_options.html.haml (5.8ms)
+  Rendered generator/_cooling_options.html.haml (5.6ms)
+  Rendered generator/_skirt_options.html.haml (3.8ms)
+  Rendered generator/_transform_options.html.haml (4.2ms)
+  Rendered generator/_more_options.html.haml (2.0ms)
+  Rendered generator/form.html.haml within layouts/application (105.6ms)
+Completed 200 OK in 118ms (Views: 115.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-03-12 18:49:44 -0600
+
+
+Started GET "/assets/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-03-12 18:49:44 -0600
+
+ActionController::RoutingError (No route matches [GET] "/assets/fonts/glyphicons-halflings-regular.woff"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.1ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (54.3ms)
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-03-12 18:49:44 -0600
+
+
+Started GET "/assets/fonts/glyphicons-halflings-regular.ttf" for 127.0.0.1 at 2014-03-12 18:49:44 -0600
+
+ActionController::RoutingError (No route matches [GET] "/assets/fonts/glyphicons-halflings-regular.ttf"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.9ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (29.4ms)
+
+
+Started GET "/assets/fonts/glyphicons-halflings-regular.svg" for 127.0.0.1 at 2014-03-12 18:49:45 -0600
+
+ActionController::RoutingError (No route matches [GET] "/assets/fonts/glyphicons-halflings-regular.svg"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.1ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (29.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-12 18:49:54 -0600
+Processing by HomeController#index as HTML
+  Rendered navbar/index.html.erb (3.7ms)
+  Rendered model_objects/categoryList.html.haml (2.1ms)
+  [1m[35mUserModel Load (0.3ms)[0m  SELECT `user_models`.* FROM `user_models`
+  Rendered model_objects/galleryView.html.haml (140.4ms)
+  Rendered home/index.html.erb within layouts/application (145.4ms)
+Completed 200 OK in 157ms (Views: 155.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-12 18:49:55 -0600
+
+
+Started GET "/assets/begin.css?body=1" for 127.0.0.1 at 2014-03-12 18:49:55 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-12 18:49:55 -0600
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-12 18:49:55 -0600
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-12 18:49:55 -0600
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2014-03-12 18:49:55 -0600
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-12 18:49:55 -0600
+
+
+Started GET "/assets/buttons/reset.css?body=1" for 127.0.0.1 at 2014-03-12 18:49:55 -0600
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-12 18:49:55 -0600
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-03-12 18:49:55 -0600
+
+
+Started GET "/assets/edit.css?body=1" for 127.0.0.1 at 2014-03-12 18:49:55 -0600
+
+
+Started GET "/assets/fancybox.css?body=1" for 127.0.0.1 at 2014-03-12 18:49:55 -0600
+
+
+Started GET "/assets/generator.css?body=1" for 127.0.0.1 at 2014-03-12 18:49:55 -0600
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-03-12 18:49:55 -0600
+
+
+Started GET "/assets/model_objects.css?body=1" for 127.0.0.1 at 2014-03-12 18:49:55 -0600
+
+
+Started GET "/assets/navbar.css?body=1" for 127.0.0.1 at 2014-03-12 18:49:55 -0600
+
+
+Started GET "/assets/profiles.css?body=1" for 127.0.0.1 at 2014-03-12 18:49:55 -0600
+
+
+Started GET "/assets/userfiles.css?body=1" for 127.0.0.1 at 2014-03-12 18:49:55 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-03-12 18:49:55 -0600
+
+
+Started GET "/assets/zohoverify.css?body=1" for 127.0.0.1 at 2014-03-12 18:49:55 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-12 18:49:55 -0600
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-03-12 18:49:55 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-12 18:49:55 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-12 18:49:55 -0600
+
+
+Started GET "/assets/model_objects/mousewheel.js?body=1" for 127.0.0.1 at 2014-03-12 18:49:55 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-12 19:05:10 -0600
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 11 LIMIT 1[0m
+  Rendered navbar/index.html.erb (2.3ms)
+  Rendered model_objects/categoryList.html.haml (2.1ms)
+  [1m[35mUserModel Load (0.3ms)[0m  SELECT `user_models`.* FROM `user_models`
+  Rendered model_objects/galleryView.html.haml (143.5ms)
+  Rendered home/index.html.erb within layouts/application (148.1ms)
+Completed 200 OK in 169ms (Views: 167.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-12 19:05:10 -0600
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-12 19:05:10 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-12 19:05:10 -0600
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-12 19:05:10 -0600
+
+
+Started GET "/assets/begin.css?body=1" for 127.0.0.1 at 2014-03-12 19:05:10 -0600
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-12 19:05:10 -0600
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2014-03-12 19:05:10 -0600
+
+
+Started GET "/assets/buttons/reset.css?body=1" for 127.0.0.1 at 2014-03-12 19:05:10 -0600
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-12 19:05:10 -0600
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-03-12 19:05:10 -0600
+
+
+Started GET "/assets/edit.css?body=1" for 127.0.0.1 at 2014-03-12 19:05:10 -0600
+
+
+Started GET "/assets/fancybox.css?body=1" for 127.0.0.1 at 2014-03-12 19:05:10 -0600
+
+
+Started GET "/assets/generator.css?body=1" for 127.0.0.1 at 2014-03-12 19:05:10 -0600
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-03-12 19:05:10 -0600
+
+
+Started GET "/assets/model_objects.css?body=1" for 127.0.0.1 at 2014-03-12 19:05:10 -0600
+
+
+Started GET "/assets/navbar.css?body=1" for 127.0.0.1 at 2014-03-12 19:05:10 -0600
+
+
+Started GET "/assets/profiles.css?body=1" for 127.0.0.1 at 2014-03-12 19:05:10 -0600
+
+
+Started GET "/assets/userfiles.css?body=1" for 127.0.0.1 at 2014-03-12 19:05:10 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-03-12 19:05:10 -0600
+
+
+Started GET "/assets/zohoverify.css?body=1" for 127.0.0.1 at 2014-03-12 19:05:10 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-12 19:05:10 -0600
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-03-12 19:05:10 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-12 19:05:10 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-12 19:05:10 -0600
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-12 19:05:11 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-12 19:05:11 -0600
+
+
+Started GET "/assets/model_objects/fancybox.js?body=1" for 127.0.0.1 at 2014-03-12 19:05:11 -0600
+
+
+Started GET "/assets/model_objects/easing.js?body=1" for 127.0.0.1 at 2014-03-12 19:05:11 -0600
+
+
+Started GET "/assets/model_objects/mousewheel.js?body=1" for 127.0.0.1 at 2014-03-12 19:05:11 -0600
+
+
+Started GET "/assets/model_objects/three.js?body=1" for 127.0.0.1 at 2014-03-12 19:05:11 -0600
+
+
+Started GET "/assets/model_objects/STLloader.js?body=1" for 127.0.0.1 at 2014-03-12 19:05:11 -0600
+
+
+Started GET "/assets/model_objects/TrackBallControls.js?body=1" for 127.0.0.1 at 2014-03-12 19:05:11 -0600
+
+
+Started GET "/assets/model_objects/threejsfunctions.js?body=1" for 127.0.0.1 at 2014-03-12 19:05:11 -0600
+
+
+Started GET "/assets/model_objects/model_objects.js?body=1" for 127.0.0.1 at 2014-03-12 19:05:11 -0600
+
+
+Started GET "/assets/lani_beta_logo.svg" for 127.0.0.1 at 2014-03-12 19:05:11 -0600
+
+
+Started GET "/system/user_models/thumbnails/000/000/030/original/images.jpeg?1394672598" for 127.0.0.1 at 2014-03-12 19:05:11 -0600
+
+ActionController::RoutingError (No route matches [GET] "/system/user_models/thumbnails/000/000/030/original/images.jpeg"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.0ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (30.3ms)
+
+
+Started GET "/assets/favicon.jpg" for 127.0.0.1 at 2014-03-12 19:05:11 -0600
+
+
+Started GET "/model_objects/single?id=30" for 127.0.0.1 at 2014-03-12 19:05:13 -0600
+Processing by ModelObjectsController#single as HTML
+  Parameters: {"id"=>"30"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 11 LIMIT 1[0m
+  [1m[35mUserModel Load (0.2ms)[0m  SELECT `user_models`.* FROM `user_models` WHERE `user_models`.`id` = 30 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 11 LIMIT 1[0m  [["id", 11]]
+  Rendered navbar/index.html.erb (2.5ms)
+  [1m[35mComment Load (0.3ms)[0m  SELECT `comments`.* FROM `comments` WHERE `comments`.`user_model_id` = 30
+  Rendered comments/new.html.erb (2.0ms)
+  Rendered model_objects/single.html.haml within layouts/application (17.1ms)
+Completed 200 OK in 32ms (Views: 28.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/stylesheets/buttons/3Dbuttons.css" for 127.0.0.1 at 2014-03-12 19:05:13 -0600
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/buttons/3Dbuttons.css"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.8ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (30.3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-12 19:05:13 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-12 19:05:13 -0600
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-03-12 19:05:13 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-12 19:05:13 -0600
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-12 19:05:13 -0600
+
+
+Started GET "/assets/model_objects/fancybox.js?body=1" for 127.0.0.1 at 2014-03-12 19:05:13 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-12 19:05:13 -0600
+
+
+Started GET "/assets/model_objects/easing.js?body=1" for 127.0.0.1 at 2014-03-12 19:05:13 -0600
+
+
+Started GET "/assets/model_objects/mousewheel.js?body=1" for 127.0.0.1 at 2014-03-12 19:05:13 -0600
+
+
+Started GET "/assets/model_objects/three.js?body=1" for 127.0.0.1 at 2014-03-12 19:05:13 -0600
+
+
+Started GET "/assets/model_objects/STLloader.js?body=1" for 127.0.0.1 at 2014-03-12 19:05:13 -0600
+
+
+Started GET "/assets/model_objects/TrackBallControls.js?body=1" for 127.0.0.1 at 2014-03-12 19:05:13 -0600
+
+
+Started GET "/assets/model_objects/threejsfunctions.js?body=1" for 127.0.0.1 at 2014-03-12 19:05:13 -0600
+
+
+Started GET "/assets/model_objects/model_objects.js?body=1" for 127.0.0.1 at 2014-03-12 19:05:13 -0600
+
+
+Started GET "/system/user_models/thumbnails/000/000/030/original/images.jpeg?1394672598" for 127.0.0.1 at 2014-03-12 19:05:13 -0600
+
+ActionController::RoutingError (No route matches [GET] "/system/user_models/thumbnails/000/000/030/original/images.jpeg"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.6ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (29.3ms)
+
+
+Started GET "/generator/form?modelid=30" for 127.0.0.1 at 2014-03-12 19:05:14 -0600
+Processing by GeneratorController#form as HTML
+  Parameters: {"modelid"=>"30"}
+  [1m[36mUserModel Load (0.3ms)[0m  [1mSELECT `user_models`.* FROM `user_models` WHERE `user_models`.`id` = 30 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 11 LIMIT 1
+  Rendered navbar/index.html.erb (2.3ms)
+  Rendered generator/_printer_options.html.haml (2.0ms)
+  Rendered generator/_filament_options.html.haml (1.4ms)
+  Rendered generator/_speed_options.html.haml (2.4ms)
+  Rendered generator/_acceleration_options.html.haml (1.0ms)
+  Rendered generator/_accuracy_options.html.haml (0.7ms)
+  Rendered generator/_print_options.html.haml (3.5ms)
+  Rendered generator/_support_material_options.html.haml (2.0ms)
+  Rendered generator/_retraction_options.html.haml (1.9ms)
+  Rendered generator/_cooling_options.html.haml (1.9ms)
+  Rendered generator/_skirt_options.html.haml (1.1ms)
+  Rendered generator/_transform_options.html.haml (1.3ms)
+  Rendered generator/_more_options.html.haml (0.4ms)
+  Rendered generator/form.html.haml within layouts/application (40.6ms)
+Completed 200 OK in 55ms (Views: 52.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-03-12 19:05:14 -0600
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-03-12 19:05:14 -0600
+
+
+Started GET "/assets/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-03-12 19:05:14 -0600
+
+ActionController::RoutingError (No route matches [GET] "/assets/fonts/glyphicons-halflings-regular.woff"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.7ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (29.2ms)
+
+
+Started GET "/assets/fonts/glyphicons-halflings-regular.ttf" for 127.0.0.1 at 2014-03-12 19:05:14 -0600
+
+ActionController::RoutingError (No route matches [GET] "/assets/fonts/glyphicons-halflings-regular.ttf"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.6ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (29.1ms)
+
+
+Started GET "/assets/fonts/glyphicons-halflings-regular.svg" for 127.0.0.1 at 2014-03-12 19:05:14 -0600
+
+ActionController::RoutingError (No route matches [GET] "/assets/fonts/glyphicons-halflings-regular.svg"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.7ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (28.3ms)
+
+
+Started GET "/generator/form?modelid=30" for 127.0.0.1 at 2014-03-12 19:05:28 -0600
+Processing by GeneratorController#form as HTML
+  Parameters: {"modelid"=>"30"}
+  [1m[36mUserModel Load (0.2ms)[0m  [1mSELECT `user_models`.* FROM `user_models` WHERE `user_models`.`id` = 30 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 11 LIMIT 1
+  Rendered navbar/index.html.erb (5.8ms)
+  Rendered generator/_printer_options.html.haml (10.8ms)
+  Rendered generator/_filament_options.html.haml (4.7ms)
+  Rendered generator/_speed_options.html.haml (6.9ms)
+  Rendered generator/_acceleration_options.html.haml (4.1ms)
+  Rendered generator/_accuracy_options.html.haml (3.2ms)
+  Rendered generator/_print_options.html.haml (10.8ms)
+  Rendered generator/_support_material_options.html.haml (6.2ms)
+  Rendered generator/_retraction_options.html.haml (6.6ms)
+  Rendered generator/_cooling_options.html.haml (7.2ms)
+  Rendered generator/_skirt_options.html.haml (4.3ms)
+  Rendered generator/_transform_options.html.haml (5.9ms)
+  Rendered generator/_more_options.html.haml (2.5ms)
+  Rendered generator/form.html.haml within layouts/application (238.3ms)
+Completed 200 OK in 396ms (Views: 333.4ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-12 19:05:29 -0600
+
+
+Started GET "/assets/begin.css?body=1" for 127.0.0.1 at 2014-03-12 19:05:29 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-12 19:05:29 -0600
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-12 19:05:29 -0600
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-12 19:05:29 -0600
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-12 19:05:29 -0600
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2014-03-12 19:05:29 -0600
+
+
+Started GET "/assets/buttons/reset.css?body=1" for 127.0.0.1 at 2014-03-12 19:05:29 -0600
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-12 19:05:29 -0600
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-03-12 19:05:29 -0600
+
+
+Started GET "/assets/edit.css?body=1" for 127.0.0.1 at 2014-03-12 19:05:29 -0600
+
+
+Started GET "/assets/fancybox.css?body=1" for 127.0.0.1 at 2014-03-12 19:05:29 -0600
+
+
+Started GET "/assets/generator.css?body=1" for 127.0.0.1 at 2014-03-12 19:05:29 -0600
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-03-12 19:05:29 -0600
+
+
+Started GET "/assets/model_objects.css?body=1" for 127.0.0.1 at 2014-03-12 19:05:29 -0600
+
+
+Started GET "/assets/navbar.css?body=1" for 127.0.0.1 at 2014-03-12 19:05:29 -0600
+
+
+Started GET "/assets/profiles.css?body=1" for 127.0.0.1 at 2014-03-12 19:05:29 -0600
+
+
+Started GET "/assets/userfiles.css?body=1" for 127.0.0.1 at 2014-03-12 19:05:29 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-03-12 19:05:29 -0600
+
+
+Started GET "/assets/zohoverify.css?body=1" for 127.0.0.1 at 2014-03-12 19:05:29 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-12 19:05:29 -0600
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-03-12 19:05:29 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-12 19:05:29 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-12 19:05:29 -0600
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-12 19:05:29 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-12 19:05:29 -0600
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-03-12 19:05:29 -0600
+
+
+Started GET "/assets/lani_beta_logo.jpg" for 127.0.0.1 at 2014-03-12 19:05:29 -0600
+
+
+Started GET "/assets/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-03-12 19:05:29 -0600
+
+ActionController::RoutingError (No route matches [GET] "/assets/fonts/glyphicons-halflings-regular.woff"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.6ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (35.8ms)
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-03-12 19:05:29 -0600
+
+
+Started GET "/assets/fonts/glyphicons-halflings-regular.ttf" for 127.0.0.1 at 2014-03-12 19:05:29 -0600
+
+ActionController::RoutingError (No route matches [GET] "/assets/fonts/glyphicons-halflings-regular.ttf"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.0ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (30.2ms)
+
+
+Started GET "/assets/fonts/glyphicons-halflings-regular.svg" for 127.0.0.1 at 2014-03-12 19:05:29 -0600
+
+ActionController::RoutingError (No route matches [GET] "/assets/fonts/glyphicons-halflings-regular.svg"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.9ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (32.8ms)
+
+
+Started GET "/assets/favicon.jpg" for 127.0.0.1 at 2014-03-12 19:05:29 -0600
+
+
+Started POST "/generator/submit" for 127.0.0.1 at 2014-03-12 19:05:48 -0600
+Processing by GeneratorController#submit as JS
+  Parameters: {"utf8"=>"✓", "generator"=>{"nozzle_diameter"=>"", "center_of_print_x"=>"", "center_of_print_y"=>"", "gcode_flavor"=>"reprap", "use_relative_e_distances"=>"no", "gcode_arcs"=>"no", "g0"=>"no", "vibration_limit"=>"", "filament_diameter"=>"", "extrusion_multiplier"=>"", "temperature"=>"", "first_layer_temperature"=>"", "bed_temperature"=>"", "first_layer_bed_temperature"=>"", "travel_speed"=>"", "perimeter_speed"=>"", "small_perimeter_speed"=>"", "external_perimeter_speed"=>"", "infill_speed"=>"", "solid_infill_speed"=>"", "top_solid_infill_speed"=>"", "support_material_speed"=>"", "bridge_speed"=>"", "gap_fill_speed"=>"", "first_layer_speed"=>"", "perimeter_acceleration"=>"", "infill_acceleration"=>"", "bridge_acceleration"=>"", "default_acceleration"=>"", "layer_height"=>"", "first_layer_height"=>"", "infill_every_layers"=>"", "solid_infill_every_layers"=>"", "perimeters"=>"", "top_solid_layers"=>"", "bottom_solid_layers"=>"", "solid_layers"=>"", "fill_density"=>"", "fill_angle"=>"", "fill_pattern"=>"line", "solid_fill_pattern"=>"rectilinear", "extra_perimeters"=>"no", "randomize_start"=>"no", "avoid_crossing_perimeters"=>"no", "external_perimeters_first"=>"no", "only_retract_when_crossing_perimeters"=>"no", "solid_infill_below_area"=>"", "infill_only_where_needed"=>"no", "infill_first"=>"no", "support_material"=>"no", "support_material_threshold"=>"", "support_material_pattern"=>"rectilinear", "support_material_spacing"=>"", "support_material_angle"=>"", "support_material_interface_layers"=>"", "support_material_interface_spacing"=>"", "raft_layers"=>"", "support_material_enforce_layers"=>"", "retract_length"=>"", "retract_speed"=>"", "retract_restart_extra"=>"", "retract_before_travel"=>"", "retract_lift"=>"", "retract_layer_change"=>"no", "wipe"=>"no", "retract_length_toolchange"=>"", "retract_restart_extra_toolchange"=>"", "cooling"=>"no", "min_fan_speed"=>"", "max_fan_speed"=>"", "bridge_fan_speed"=>"", "fan_below_layer_time"=>"", "slowdown_below_layer_time"=>"", "min_print_speed"=>"", "disable_fan_first_layers"=>"", "fan_always_on"=>"no", "skirts"=>"", "skirt_distance"=>"", "skirt_height"=>"", "min_skirt_length"=>"", "brim_width"=>"", "scale"=>"", "rotate"=>"", "duplicate"=>"", "bed_size_x"=>"", "bed_size_y"=>"", "duplicate_grid"=>"", "duplicate_distance"=>"", "resolution"=>"", "modelid"=>"30"}}
+  [1m[36mUserModel Load (0.3ms)[0m  [1mSELECT `user_models`.* FROM `user_models` WHERE `user_models`.`id` = 30 LIMIT 1[0m
+Completed 500 Internal Server Error in 14646ms
+
+Errno::ENOENT (No such file or directory - public/system/user_models/stlfiles/000/000/030/original/Mushroom_-_My_Scan_2013-10-17_03.gcode):
+  app/controllers/generator_controller.rb:78:in `initialize'
+  app/controllers/generator_controller.rb:78:in `open'
+  app/controllers/generator_controller.rb:78:in `submit'
+
+
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.2ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2014-03-12 19:12:32 -0600
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 11 LIMIT 1
+  Rendered navbar/index.html.erb (3.0ms)
+  Rendered model_objects/categoryList.html.haml (27.5ms)
+  [1m[36mUserModel Load (0.3ms)[0m  [1mSELECT `user_models`.* FROM `user_models`[0m
+  Rendered model_objects/galleryView.html.haml (171.6ms)
+  Rendered home/index.html.erb within layouts/application (176.3ms)
+Completed 200 OK in 190ms (Views: 187.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-12 19:12:32 -0600
+
+
+Started GET "/assets/begin.css?body=1" for 127.0.0.1 at 2014-03-12 19:12:32 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-12 19:12:32 -0600
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-12 19:12:32 -0600
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-12 19:12:32 -0600
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-12 19:12:32 -0600
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2014-03-12 19:12:32 -0600
+
+
+Started GET "/assets/buttons/reset.css?body=1" for 127.0.0.1 at 2014-03-12 19:12:32 -0600
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-12 19:12:32 -0600
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-03-12 19:12:32 -0600
+
+
+Started GET "/assets/edit.css?body=1" for 127.0.0.1 at 2014-03-12 19:12:32 -0600
+
+
+Started GET "/assets/fancybox.css?body=1" for 127.0.0.1 at 2014-03-12 19:12:32 -0600
+
+
+Started GET "/assets/generator.css?body=1" for 127.0.0.1 at 2014-03-12 19:12:32 -0600
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-03-12 19:12:32 -0600
+
+
+Started GET "/assets/model_objects.css?body=1" for 127.0.0.1 at 2014-03-12 19:12:32 -0600
+
+
+Started GET "/assets/profiles.css?body=1" for 127.0.0.1 at 2014-03-12 19:12:32 -0600
+
+
+Started GET "/assets/userfiles.css?body=1" for 127.0.0.1 at 2014-03-12 19:12:32 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-03-12 19:12:32 -0600
+
+
+Started GET "/assets/zohoverify.css?body=1" for 127.0.0.1 at 2014-03-12 19:12:32 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-12 19:12:32 -0600
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-03-12 19:12:32 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-12 19:12:32 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-12 19:12:32 -0600
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-12 19:12:32 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-12 19:12:32 -0600
+
+
+Started GET "/assets/model_objects/fancybox.js?body=1" for 127.0.0.1 at 2014-03-12 19:12:32 -0600
+
+
+Started GET "/assets/model_objects/easing.js?body=1" for 127.0.0.1 at 2014-03-12 19:12:32 -0600
+
+
+Started GET "/assets/model_objects/mousewheel.js?body=1" for 127.0.0.1 at 2014-03-12 19:12:32 -0600
+
+
+Started GET "/assets/model_objects/three.js?body=1" for 127.0.0.1 at 2014-03-12 19:12:32 -0600
+
+
+Started GET "/assets/model_objects/STLloader.js?body=1" for 127.0.0.1 at 2014-03-12 19:12:32 -0600
+
+
+Started GET "/assets/model_objects/TrackBallControls.js?body=1" for 127.0.0.1 at 2014-03-12 19:12:32 -0600
+
+
+Started GET "/assets/model_objects/threejsfunctions.js?body=1" for 127.0.0.1 at 2014-03-12 19:12:32 -0600
+
+
+Started GET "/assets/model_objects/model_objects.js?body=1" for 127.0.0.1 at 2014-03-12 19:12:32 -0600
+
+
+Started GET "/assets/lani_beta_logo.jpg" for 127.0.0.1 at 2014-03-12 19:12:32 -0600
+
+
+Started GET "/fonts/Roboto-Light.ttf" for 127.0.0.1 at 2014-03-12 19:12:33 -0600
+
+ActionController::RoutingError (No route matches [GET] "/fonts/Roboto-Light.ttf"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.2ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (31.8ms)
+
+
+Started GET "/fonts/Roboto-Thin.ttf" for 127.0.0.1 at 2014-03-12 19:12:33 -0600
+
+ActionController::RoutingError (No route matches [GET] "/fonts/Roboto-Thin.ttf"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.4ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (31.5ms)
+
+
+Started GET "/model_objects/single?id=27" for 127.0.0.1 at 2014-03-12 19:12:35 -0600
+Processing by ModelObjectsController#single as HTML
+  Parameters: {"id"=>"27"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 11 LIMIT 1
+  [1m[36mUserModel Load (0.2ms)[0m  [1mSELECT `user_models`.* FROM `user_models` WHERE `user_models`.`id` = 27 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1
+  Rendered navbar/index.html.erb (2.7ms)
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT `comments`.* FROM `comments` WHERE `comments`.`user_model_id` = 27[0m
+  Rendered comments/new.html.erb (1.5ms)
+  Rendered model_objects/single.html.haml within layouts/application (21.9ms)
+Completed 200 OK in 36ms (Views: 30.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-12 19:12:35 -0600
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-12 19:12:35 -0600
+
+
+Started GET "/assets/begin.css?body=1" for 127.0.0.1 at 2014-03-12 19:12:35 -0600
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-12 19:12:35 -0600
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-12 19:12:35 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-12 19:12:35 -0600
+
+
+Started GET "/stylesheets/buttons/3Dbuttons.css" for 127.0.0.1 at 2014-03-12 19:12:35 -0600
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/buttons/3Dbuttons.css"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.7ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (75.0ms)
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2014-03-12 19:12:36 -0600
+
+
+Started GET "/assets/buttons/reset.css?body=1" for 127.0.0.1 at 2014-03-12 19:12:36 -0600
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-12 19:12:36 -0600
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-03-12 19:12:36 -0600
+
+
+Started GET "/assets/edit.css?body=1" for 127.0.0.1 at 2014-03-12 19:12:36 -0600
+
+
+Started GET "/assets/generator.css?body=1" for 127.0.0.1 at 2014-03-12 19:12:36 -0600
+
+
+Started GET "/assets/fancybox.css?body=1" for 127.0.0.1 at 2014-03-12 19:12:36 -0600
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-03-12 19:12:36 -0600
+
+
+Started GET "/assets/model_objects.css?body=1" for 127.0.0.1 at 2014-03-12 19:12:36 -0600
+
+
+Started GET "/assets/profiles.css?body=1" for 127.0.0.1 at 2014-03-12 19:12:36 -0600
+
+
+Started GET "/assets/userfiles.css?body=1" for 127.0.0.1 at 2014-03-12 19:12:36 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-03-12 19:12:36 -0600
+
+
+Started GET "/assets/zohoverify.css?body=1" for 127.0.0.1 at 2014-03-12 19:12:36 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-12 19:12:36 -0600
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-03-12 19:12:36 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-12 19:12:36 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-12 19:12:36 -0600
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-12 19:12:36 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-12 19:12:36 -0600
+
+
+Started GET "/assets/model_objects/fancybox.js?body=1" for 127.0.0.1 at 2014-03-12 19:12:36 -0600
+
+
+Started GET "/assets/model_objects/easing.js?body=1" for 127.0.0.1 at 2014-03-12 19:12:36 -0600
+
+
+Started GET "/assets/model_objects/mousewheel.js?body=1" for 127.0.0.1 at 2014-03-12 19:12:36 -0600
+
+
+Started GET "/assets/model_objects/three.js?body=1" for 127.0.0.1 at 2014-03-12 19:12:36 -0600
+
+
+Started GET "/assets/model_objects/STLloader.js?body=1" for 127.0.0.1 at 2014-03-12 19:12:36 -0600
+
+
+Started GET "/assets/model_objects/TrackBallControls.js?body=1" for 127.0.0.1 at 2014-03-12 19:12:36 -0600
+
+
+Started GET "/assets/model_objects/threejsfunctions.js?body=1" for 127.0.0.1 at 2014-03-12 19:12:36 -0600
+
+
+Started GET "/assets/model_objects/model_objects.js?body=1" for 127.0.0.1 at 2014-03-12 19:12:36 -0600
+
+
+Started GET "/assets/lani_beta_logo.jpg" for 127.0.0.1 at 2014-03-12 19:12:36 -0600
+
+
+Started GET "/generator/form?modelid=27" for 127.0.0.1 at 2014-03-12 19:12:37 -0600
+Processing by GeneratorController#form as HTML
+  Parameters: {"modelid"=>"27"}
+  [1m[35mUserModel Load (0.3ms)[0m  SELECT `user_models`.* FROM `user_models` WHERE `user_models`.`id` = 27 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 11 LIMIT 1[0m
+  Rendered navbar/index.html.erb (4.7ms)
+  Rendered generator/_printer_options.html.haml (1.9ms)
+  Rendered generator/_filament_options.html.haml (1.3ms)
+  Rendered generator/_speed_options.html.haml (2.3ms)
+  Rendered generator/_acceleration_options.html.haml (1.0ms)
+  Rendered generator/_accuracy_options.html.haml (0.7ms)
+  Rendered generator/_print_options.html.haml (3.5ms)
+  Rendered generator/_support_material_options.html.haml (2.2ms)
+  Rendered generator/_retraction_options.html.haml (2.0ms)
+  Rendered generator/_cooling_options.html.haml (2.0ms)
+  Rendered generator/_skirt_options.html.haml (1.7ms)
+  Rendered generator/_transform_options.html.haml (6.0ms)
+  Rendered generator/_more_options.html.haml (0.5ms)
+  Rendered generator/form.html.haml within layouts/application (184.6ms)
+Completed 200 OK in 198ms (Views: 195.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/lani_beta_logo.jpg" for 127.0.0.1 at 2014-03-12 19:12:37 -0600
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-03-12 19:12:37 -0600
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-03-12 19:12:37 -0600
+
+
+Started GET "/assets/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-03-12 19:12:37 -0600
+
+ActionController::RoutingError (No route matches [GET] "/assets/fonts/glyphicons-halflings-regular.woff"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.0ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (31.2ms)
+
+
+Started GET "/assets/fonts/glyphicons-halflings-regular.ttf" for 127.0.0.1 at 2014-03-12 19:12:37 -0600
+
+ActionController::RoutingError (No route matches [GET] "/assets/fonts/glyphicons-halflings-regular.ttf"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.8ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (29.8ms)
+
+
+Started GET "/assets/fonts/glyphicons-halflings-regular.svg" for 127.0.0.1 at 2014-03-12 19:12:37 -0600
+
+ActionController::RoutingError (No route matches [GET] "/assets/fonts/glyphicons-halflings-regular.svg"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.0ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (24.9ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (53.3ms)
+
+
+Started POST "/generator/submit" for 127.0.0.1 at 2014-03-12 19:12:38 -0600
+Processing by GeneratorController#submit as JS
+  Parameters: {"utf8"=>"✓", "generator"=>{"nozzle_diameter"=>"", "center_of_print_x"=>"", "center_of_print_y"=>"", "gcode_flavor"=>"reprap", "use_relative_e_distances"=>"no", "gcode_arcs"=>"no", "g0"=>"no", "vibration_limit"=>"", "filament_diameter"=>"", "extrusion_multiplier"=>"", "temperature"=>"", "first_layer_temperature"=>"", "bed_temperature"=>"", "first_layer_bed_temperature"=>"", "travel_speed"=>"", "perimeter_speed"=>"", "small_perimeter_speed"=>"", "external_perimeter_speed"=>"", "infill_speed"=>"", "solid_infill_speed"=>"", "top_solid_infill_speed"=>"", "support_material_speed"=>"", "bridge_speed"=>"", "gap_fill_speed"=>"", "first_layer_speed"=>"", "perimeter_acceleration"=>"", "infill_acceleration"=>"", "bridge_acceleration"=>"", "default_acceleration"=>"", "layer_height"=>"", "first_layer_height"=>"", "infill_every_layers"=>"", "solid_infill_every_layers"=>"", "perimeters"=>"", "top_solid_layers"=>"", "bottom_solid_layers"=>"", "solid_layers"=>"", "fill_density"=>"", "fill_angle"=>"", "fill_pattern"=>"line", "solid_fill_pattern"=>"rectilinear", "extra_perimeters"=>"no", "randomize_start"=>"no", "avoid_crossing_perimeters"=>"no", "external_perimeters_first"=>"no", "only_retract_when_crossing_perimeters"=>"no", "solid_infill_below_area"=>"", "infill_only_where_needed"=>"no", "infill_first"=>"no", "support_material"=>"no", "support_material_threshold"=>"", "support_material_pattern"=>"rectilinear", "support_material_spacing"=>"", "support_material_angle"=>"", "support_material_interface_layers"=>"", "support_material_interface_spacing"=>"", "raft_layers"=>"", "support_material_enforce_layers"=>"", "retract_length"=>"", "retract_speed"=>"", "retract_restart_extra"=>"", "retract_before_travel"=>"", "retract_lift"=>"", "retract_layer_change"=>"no", "wipe"=>"no", "retract_length_toolchange"=>"", "retract_restart_extra_toolchange"=>"", "cooling"=>"no", "min_fan_speed"=>"", "max_fan_speed"=>"", "bridge_fan_speed"=>"", "fan_below_layer_time"=>"", "slowdown_below_layer_time"=>"", "min_print_speed"=>"", "disable_fan_first_layers"=>"", "fan_always_on"=>"no", "skirts"=>"", "skirt_distance"=>"", "skirt_height"=>"", "min_skirt_length"=>"", "brim_width"=>"", "scale"=>"", "rotate"=>"", "duplicate"=>"", "bed_size_x"=>"", "bed_size_y"=>"", "duplicate_grid"=>"", "duplicate_distance"=>"", "resolution"=>"", "modelid"=>"27"}}
+  [1m[35mUserModel Load (0.3ms)[0m  SELECT `user_models`.* FROM `user_models` WHERE `user_models`.`id` = 27 LIMIT 1
+  Rendered text template (0.0ms)
+Completed 200 OK in 11103ms (Views: 3.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2014-03-12 19:14:18 -0600
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 11 LIMIT 1[0m
+  Rendered navbar/index.html.erb (3.1ms)
+  Rendered model_objects/categoryList.html.haml (2.7ms)
+  [1m[35mUserModel Load (0.3ms)[0m  SELECT `user_models`.* FROM `user_models`
+  Rendered model_objects/galleryView.html.haml (144.8ms)
+  Rendered home/index.html.erb within layouts/application (149.3ms)
+Completed 200 OK in 164ms (Views: 160.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:18 -0600
+
+
+Started GET "/assets/begin.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:18 -0600
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:18 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:18 -0600
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:18 -0600
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:18 -0600
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:18 -0600
+
+
+Started GET "/assets/buttons/reset.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:18 -0600
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:18 -0600
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:18 -0600
+
+
+Started GET "/assets/edit.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:18 -0600
+
+
+Started GET "/assets/fancybox.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:18 -0600
+
+
+Started GET "/assets/generator.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:18 -0600
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:18 -0600
+
+
+Started GET "/assets/model_objects.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:18 -0600
+
+
+Started GET "/assets/profiles.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:19 -0600
+
+
+Started GET "/assets/userfiles.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:19 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:19 -0600
+
+
+Started GET "/assets/zohoverify.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:19 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-12 19:14:19 -0600
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-03-12 19:14:19 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-12 19:14:19 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-12 19:14:19 -0600
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-12 19:14:19 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-12 19:14:19 -0600
+
+
+Started GET "/assets/model_objects/fancybox.js?body=1" for 127.0.0.1 at 2014-03-12 19:14:19 -0600
+
+
+Started GET "/assets/model_objects/easing.js?body=1" for 127.0.0.1 at 2014-03-12 19:14:19 -0600
+
+
+Started GET "/assets/model_objects/mousewheel.js?body=1" for 127.0.0.1 at 2014-03-12 19:14:19 -0600
+
+
+Started GET "/assets/model_objects/three.js?body=1" for 127.0.0.1 at 2014-03-12 19:14:19 -0600
+
+
+Started GET "/assets/model_objects/STLloader.js?body=1" for 127.0.0.1 at 2014-03-12 19:14:19 -0600
+
+
+Started GET "/assets/model_objects/TrackBallControls.js?body=1" for 127.0.0.1 at 2014-03-12 19:14:19 -0600
+
+
+Started GET "/assets/model_objects/threejsfunctions.js?body=1" for 127.0.0.1 at 2014-03-12 19:14:19 -0600
+
+
+Started GET "/assets/model_objects/model_objects.js?body=1" for 127.0.0.1 at 2014-03-12 19:14:19 -0600
+
+
+Started GET "/assets/lani_beta_logo.jpg" for 127.0.0.1 at 2014-03-12 19:14:19 -0600
+
+
+Started GET "/fonts/Roboto-Thin.ttf" for 127.0.0.1 at 2014-03-12 19:14:19 -0600
+
+ActionController::RoutingError (No route matches [GET] "/fonts/Roboto-Thin.ttf"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.0ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (31.4ms)
+
+
+Started GET "/fonts/Roboto-Light.ttf" for 127.0.0.1 at 2014-03-12 19:14:19 -0600
+
+ActionController::RoutingError (No route matches [GET] "/fonts/Roboto-Light.ttf"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.9ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (29.4ms)
+
+
+Started GET "/model_objects/single?id=29" for 127.0.0.1 at 2014-03-12 19:14:20 -0600
+Processing by ModelObjectsController#single as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 11 LIMIT 1[0m
+  [1m[35mUserModel Load (0.2ms)[0m  SELECT `user_models`.* FROM `user_models` WHERE `user_models`.`id` = 29 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  Rendered navbar/index.html.erb (2.5ms)
+  [1m[35mComment Load (0.3ms)[0m  SELECT `comments`.* FROM `comments` WHERE `comments`.`user_model_id` = 29
+  Rendered comments/new.html.erb (1.3ms)
+  Rendered model_objects/single.html.haml within layouts/application (16.0ms)
+Completed 200 OK in 29ms (Views: 25.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:20 -0600
+
+
+Started GET "/assets/begin.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:20 -0600
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:20 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:20 -0600
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:20 -0600
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:20 -0600
+
+
+Started GET "/stylesheets/buttons/3Dbuttons.css" for 127.0.0.1 at 2014-03-12 19:14:20 -0600
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/buttons/3Dbuttons.css"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.3ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (31.0ms)
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:20 -0600
+
+
+Started GET "/assets/buttons/reset.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:20 -0600
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:20 -0600
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:20 -0600
+
+
+Started GET "/assets/edit.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:20 -0600
+
+
+Started GET "/assets/fancybox.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:20 -0600
+
+
+Started GET "/assets/generator.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:20 -0600
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:20 -0600
+
+
+Started GET "/assets/model_objects.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:20 -0600
+
+
+Started GET "/assets/profiles.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:20 -0600
+
+
+Started GET "/assets/userfiles.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:20 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:20 -0600
+
+
+Started GET "/assets/zohoverify.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:20 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-12 19:14:20 -0600
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-03-12 19:14:20 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-12 19:14:20 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-12 19:14:20 -0600
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-12 19:14:20 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-12 19:14:20 -0600
+
+
+Started GET "/assets/model_objects/fancybox.js?body=1" for 127.0.0.1 at 2014-03-12 19:14:20 -0600
+
+
+Started GET "/assets/model_objects/easing.js?body=1" for 127.0.0.1 at 2014-03-12 19:14:20 -0600
+
+
+Started GET "/assets/model_objects/mousewheel.js?body=1" for 127.0.0.1 at 2014-03-12 19:14:20 -0600
+
+
+Started GET "/assets/model_objects/three.js?body=1" for 127.0.0.1 at 2014-03-12 19:14:20 -0600
+
+
+Started GET "/assets/model_objects/STLloader.js?body=1" for 127.0.0.1 at 2014-03-12 19:14:20 -0600
+
+
+Started GET "/assets/model_objects/TrackBallControls.js?body=1" for 127.0.0.1 at 2014-03-12 19:14:20 -0600
+
+
+Started GET "/assets/model_objects/threejsfunctions.js?body=1" for 127.0.0.1 at 2014-03-12 19:14:20 -0600
+
+
+Started GET "/assets/model_objects/model_objects.js?body=1" for 127.0.0.1 at 2014-03-12 19:14:20 -0600
+
+
+Started GET "/assets/lani_beta_logo.jpg" for 127.0.0.1 at 2014-03-12 19:14:20 -0600
+
+
+Started GET "/generator/form?modelid=29" for 127.0.0.1 at 2014-03-12 19:14:22 -0600
+Processing by GeneratorController#form as HTML
+  Parameters: {"modelid"=>"29"}
+  [1m[36mUserModel Load (0.3ms)[0m  [1mSELECT `user_models`.* FROM `user_models` WHERE `user_models`.`id` = 29 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 11 LIMIT 1
+  Rendered navbar/index.html.erb (3.7ms)
+  Rendered generator/_printer_options.html.haml (2.3ms)
+  Rendered generator/_filament_options.html.haml (1.6ms)
+  Rendered generator/_speed_options.html.haml (2.9ms)
+  Rendered generator/_acceleration_options.html.haml (1.2ms)
+  Rendered generator/_accuracy_options.html.haml (0.9ms)
+  Rendered generator/_print_options.html.haml (4.2ms)
+  Rendered generator/_support_material_options.html.haml (2.7ms)
+  Rendered generator/_retraction_options.html.haml (2.3ms)
+  Rendered generator/_cooling_options.html.haml (2.3ms)
+  Rendered generator/_skirt_options.html.haml (1.3ms)
+  Rendered generator/_transform_options.html.haml (2.1ms)
+  Rendered generator/_more_options.html.haml (0.6ms)
+  Rendered generator/form.html.haml within layouts/application (188.1ms)
+Completed 200 OK in 202ms (Views: 199.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/lani_beta_logo.jpg" for 127.0.0.1 at 2014-03-12 19:14:22 -0600
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-03-12 19:14:22 -0600
+
+
+Started GET "/assets/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-03-12 19:14:22 -0600
+
+ActionController::RoutingError (No route matches [GET] "/assets/fonts/glyphicons-halflings-regular.woff"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.7ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (38.0ms)
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-03-12 19:14:22 -0600
+
+
+Started GET "/assets/fonts/glyphicons-halflings-regular.ttf" for 127.0.0.1 at 2014-03-12 19:14:22 -0600
+
+ActionController::RoutingError (No route matches [GET] "/assets/fonts/glyphicons-halflings-regular.ttf"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.3ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (30.6ms)
+
+
+Started GET "/assets/fonts/glyphicons-halflings-regular.svg" for 127.0.0.1 at 2014-03-12 19:14:22 -0600
+
+ActionController::RoutingError (No route matches [GET] "/assets/fonts/glyphicons-halflings-regular.svg"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.2ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (30.0ms)
+
+
+Started POST "/generator/submit" for 127.0.0.1 at 2014-03-12 19:14:23 -0600
+Processing by GeneratorController#submit as JS
+  Parameters: {"utf8"=>"✓", "generator"=>{"nozzle_diameter"=>"", "center_of_print_x"=>"", "center_of_print_y"=>"", "gcode_flavor"=>"reprap", "use_relative_e_distances"=>"no", "gcode_arcs"=>"no", "g0"=>"no", "vibration_limit"=>"", "filament_diameter"=>"", "extrusion_multiplier"=>"", "temperature"=>"", "first_layer_temperature"=>"", "bed_temperature"=>"", "first_layer_bed_temperature"=>"", "travel_speed"=>"", "perimeter_speed"=>"", "small_perimeter_speed"=>"", "external_perimeter_speed"=>"", "infill_speed"=>"", "solid_infill_speed"=>"", "top_solid_infill_speed"=>"", "support_material_speed"=>"", "bridge_speed"=>"", "gap_fill_speed"=>"", "first_layer_speed"=>"", "perimeter_acceleration"=>"", "infill_acceleration"=>"", "bridge_acceleration"=>"", "default_acceleration"=>"", "layer_height"=>"", "first_layer_height"=>"", "infill_every_layers"=>"", "solid_infill_every_layers"=>"", "perimeters"=>"", "top_solid_layers"=>"", "bottom_solid_layers"=>"", "solid_layers"=>"", "fill_density"=>"", "fill_angle"=>"", "fill_pattern"=>"line", "solid_fill_pattern"=>"rectilinear", "extra_perimeters"=>"no", "randomize_start"=>"no", "avoid_crossing_perimeters"=>"no", "external_perimeters_first"=>"no", "only_retract_when_crossing_perimeters"=>"no", "solid_infill_below_area"=>"", "infill_only_where_needed"=>"no", "infill_first"=>"no", "support_material"=>"no", "support_material_threshold"=>"", "support_material_pattern"=>"rectilinear", "support_material_spacing"=>"", "support_material_angle"=>"", "support_material_interface_layers"=>"", "support_material_interface_spacing"=>"", "raft_layers"=>"", "support_material_enforce_layers"=>"", "retract_length"=>"", "retract_speed"=>"", "retract_restart_extra"=>"", "retract_before_travel"=>"", "retract_lift"=>"", "retract_layer_change"=>"no", "wipe"=>"no", "retract_length_toolchange"=>"", "retract_restart_extra_toolchange"=>"", "cooling"=>"no", "min_fan_speed"=>"", "max_fan_speed"=>"", "bridge_fan_speed"=>"", "fan_below_layer_time"=>"", "slowdown_below_layer_time"=>"", "min_print_speed"=>"", "disable_fan_first_layers"=>"", "fan_always_on"=>"no", "skirts"=>"", "skirt_distance"=>"", "skirt_height"=>"", "min_skirt_length"=>"", "brim_width"=>"", "scale"=>"", "rotate"=>"", "duplicate"=>"", "bed_size_x"=>"", "bed_size_y"=>"", "duplicate_grid"=>"", "duplicate_distance"=>"", "resolution"=>"", "modelid"=>"29"}}
+  [1m[36mUserModel Load (0.3ms)[0m  [1mSELECT `user_models`.* FROM `user_models` WHERE `user_models`.`id` = 29 LIMIT 1[0m
+Completed 500 Internal Server Error in 14928ms
+
+Errno::ENOENT (No such file or directory - public/system/user_models/stlfiles/000/000/029/original/Mushroom_-_My_Scan_2013-10-17_03.gcode):
+  app/controllers/generator_controller.rb:78:in `initialize'
+  app/controllers/generator_controller.rb:78:in `open'
+  app/controllers/generator_controller.rb:78:in `submit'
+
+
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.9ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2014-03-12 19:14:41 -0600
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 11 LIMIT 1
+  Rendered navbar/index.html.erb (2.7ms)
+  Rendered model_objects/categoryList.html.haml (2.5ms)
+  [1m[36mUserModel Load (0.3ms)[0m  [1mSELECT `user_models`.* FROM `user_models`[0m
+  Rendered model_objects/galleryView.html.haml (145.4ms)
+  Rendered home/index.html.erb within layouts/application (149.4ms)
+Completed 200 OK in 163ms (Views: 160.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:41 -0600
+
+
+Started GET "/assets/begin.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:41 -0600
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:41 -0600
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:41 -0600
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:41 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:41 -0600
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:41 -0600
+
+
+Started GET "/assets/buttons/reset.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:41 -0600
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:41 -0600
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:41 -0600
+
+
+Started GET "/assets/edit.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:41 -0600
+
+
+Started GET "/assets/fancybox.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:41 -0600
+
+
+Started GET "/assets/generator.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:41 -0600
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:41 -0600
+
+
+Started GET "/assets/model_objects.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:41 -0600
+
+
+Started GET "/assets/profiles.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:41 -0600
+
+
+Started GET "/assets/userfiles.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:41 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:41 -0600
+
+
+Started GET "/assets/zohoverify.css?body=1" for 127.0.0.1 at 2014-03-12 19:14:41 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-12 19:14:41 -0600
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-03-12 19:14:41 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-12 19:14:41 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-12 19:14:41 -0600
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-12 19:14:41 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-12 19:14:41 -0600
+
+
+Started GET "/assets/model_objects/fancybox.js?body=1" for 127.0.0.1 at 2014-03-12 19:14:41 -0600
+
+
+Started GET "/assets/model_objects/easing.js?body=1" for 127.0.0.1 at 2014-03-12 19:14:41 -0600
+
+
+Started GET "/assets/model_objects/mousewheel.js?body=1" for 127.0.0.1 at 2014-03-12 19:14:41 -0600
+
+
+Started GET "/assets/model_objects/three.js?body=1" for 127.0.0.1 at 2014-03-12 19:14:41 -0600
+
+
+Started GET "/assets/model_objects/STLloader.js?body=1" for 127.0.0.1 at 2014-03-12 19:14:41 -0600
+
+
+Started GET "/assets/model_objects/TrackBallControls.js?body=1" for 127.0.0.1 at 2014-03-12 19:14:41 -0600
+
+
+Started GET "/assets/model_objects/threejsfunctions.js?body=1" for 127.0.0.1 at 2014-03-12 19:14:41 -0600
+
+
+Started GET "/assets/model_objects/model_objects.js?body=1" for 127.0.0.1 at 2014-03-12 19:14:41 -0600
+
+
+Started GET "/assets/lani_beta_logo.jpg" for 127.0.0.1 at 2014-03-12 19:14:41 -0600
+
+
+Started GET "/fonts/Roboto-Thin.ttf" for 127.0.0.1 at 2014-03-12 19:14:41 -0600
+
+ActionController::RoutingError (No route matches [GET] "/fonts/Roboto-Thin.ttf"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.0ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (30.7ms)
+
+
+Started GET "/fonts/Roboto-Light.ttf" for 127.0.0.1 at 2014-03-12 19:14:41 -0600
+
+ActionController::RoutingError (No route matches [GET] "/fonts/Roboto-Light.ttf"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/lucaszw/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.4ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/lucaszw/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (30.9ms)

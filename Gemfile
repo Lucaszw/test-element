@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+gem 'byebug'
+gem 'ruby-debug-passenger'
+
 gem 'paperclip', '~> 3.0'
 
 gem 'haml-rails', '0.4'

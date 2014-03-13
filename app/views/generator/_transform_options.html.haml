@@ -15,9 +15,23 @@
     (number of times, arranged automatically) :
     \#{f.number_field :duplicate , :class => "form-control"}
     %br/
-    = f.label :bed_size
-    (used only with auto arrange, mm) :
-    \#{f.number_field :bed_size , :class => "form-control"}
+    
+    .border_box
+      %h5
+        = f.label :bed_size
+        (mm) :
+      .row{:style => "padding-left:5px;padding-right:2px;"}
+        .col-lg-5
+          .input-group
+            %span.input-group-addon
+              x :
+            = f.number_field :bed_size_x  , :class => "form-control", :placeholder => "100"
+        .col-lg-5
+          .input-group
+            %span.input-group-addon
+              y :
+            = f.number_field :bed_size_y  , :class => "form-control", :placeholder => "100"
+
     %br/
     = f.label :duplicate_grid
     (row, columns) :

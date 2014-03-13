@@ -13,6 +13,23 @@
  *= require bootstrap
  */
 
+@font-face {
+  font-family: "Raleway-Light";
+  src: url("../fonts/Raleway-Light.eot");
+}
+@font-face {
+  font-family: "Raleway-Thin";
+  src: url("../fonts/Raleway-Thin.eot");
+}
+@font-face {
+  font-family: "Roboto-Light";
+  src: url("../fonts/Roboto-Light.ttf");
+}
+@font-face {
+  font-family: "Roboto-Light";
+  src: url("../fonts/Roboto-Thin.ttf");
+}
+
 input:focus, select:focus {
   outline:0px !important;
   -webkit-appearance:none;

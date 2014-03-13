@@ -28,6 +28,9 @@ GEM
     arel (4.0.2)
     atomic (1.1.14)
     builder (3.1.4)
+    byebug (2.6.0)
+      columnize (~> 0.3)
+      debugger-linecache (~> 1.2)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.3)
@@ -39,6 +42,8 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.7.0)
+    columnize (0.3.6)
+    debugger-linecache (1.2.0)
     erubis (2.7.0)
     execjs (2.0.2)
     haml (4.0.5)
@@ -95,6 +100,7 @@ GEM
       json (~> 1.4)
     rest-client (1.6.7)
       mime-types (>= 1.16)
+    ruby-debug-passenger (0.2.0)
     ruby-oembed (0.8.9)
     sass (3.2.14)
     sass-rails (4.0.1)
@@ -131,6 +137,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  byebug
   coffee-rails (~> 4.0.0)
   haml-rails (= 0.4)
   jbuilder (~> 1.2)
@@ -142,6 +149,7 @@ DEPENDENCIES
   paperclip (~> 3.0)
   rails (= 4.0.0)
   rest-client (= 1.6.7)
+  ruby-debug-passenger
   ruby-oembed (= 0.8.9)
   sass-rails (~> 4.0.0)
   sdoc

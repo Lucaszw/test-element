@@ -12,7 +12,8 @@
 
 %h3{:style => "font-weight:500;text-align:left;padding:10px 15px;"} Print options for #{@model.name}
 %h3{:style => "color:red;font-weight:500;text-align:left;padding:10px 15px;"} Leave values blank for default
-=form_for :generator , :url => generator_submit_path , :html => {:id => "generator"} do |f|
+
+=form_for :generator , :url => generator_submit_path , :html => {:id => "generator"},:remote => "true" do |f|
   
   %br
   .col-lg-8
@@ -49,10 +50,22 @@
       = render :partial => "more_options", :locals => { :f => f } 
     %br
     = f.text_field :modelid, :value => @model.id, :style => "display:none;"
-    %button.minimal{:onclick => " $('#generator').submit();" , :type => "button", :class => "btn btn-default btn-lg", :style => "padding :6px 0px;width:80px;"}
-      %span.glyphicon.glyphicon-saved
-      Save
     %button.minimal{:onclick => " $('#generator').submit();" , :type => "button", :class => "btn btn-default btn-lg", :style => "padding :6px 0px;width:160px;"}
       %span.glyphicon.glyphicon-gift
-      Print (Coming Soon)
+      Generate Gcode!
+      
+#generator_complete
 
+:coffee
+  $ ->
+    $("form#generator").bind "ajax:complete", (e, data, status, xhr) ->
+      x = JSON.parse(data.responseText)
+      params = x[1].replace("Filament diameter is 1.75 mm Filament density is 1.05 g/cc Cross sectional area of filament: 0.0240527984375 cm^2","")
+      str = "lanilabs.com"+x[0].replace("public","")
+      $( "#generator_complete" ).html( "<p>"+params+"</p><a href=  ' http://"+ str + " ' >Download Gcode Here!</a>" )
+      
+    $("form#generator").bind "ajax:beforeSend", (e, data, status, xhr) ->
+      $( "#generator_complete" ).html( "<p>Generating please wait...</p>" )
+          
+    $("form#generator").bind "ajax:error", (e, data, status, xhr) ->
+      $( "#generator_complete" ).html( "<p style='color:red;'>Could not generate gcode</p>" )

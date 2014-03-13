@@ -11,6 +11,7 @@ class GeneratorController < ApplicationController
   def download
     params[:gcode]
   end
+
   def submit
 
   # get the url of the model being printed :
@@ -26,6 +27,23 @@ class GeneratorController < ApplicationController
   params[:generator].delete :center_of_print_y
   params[:generator][:print_center] = center_point
 
+  bed_size = params[:generator][:bed_size_x] + 
+  "," + params[:generator][:bed_size_y]
+  params[:generator].delete :bed_size_x
+  params[:generator].delete :bed_size_y
+  params[:generator][:bed_size] = bed_size
+  
+  
+  # Get the in-fill density as it is not directly defined for some reason
+  # In the g-code :
+  
+  filament_density  = "0.4"
+  filament_diameter = ""
+  #   Check if the user submited a fill density, if so change filement from default
+  if (params[:generator][:fill_density] != nil && params[:generator][:fill_density] != "" && params[:generator][:fill_density].present?)
+    filament_density = params[:generator][:fill_density]
+  end
+  
   stlLocation = "public" + model.stlfile.url
   # remove the random numbers from the end of the file name :
   salt_point = stlLocation.length - stlLocation.index('?')
@@ -38,6 +56,7 @@ class GeneratorController < ApplicationController
   @gcodefile = filename + ".gcode"
 
   gcode_string = ""
+  
   params[:generator].each do |generator|
 
     # Check if the user actually submitted something, else don't add a flag
@@ -52,9 +71,29 @@ class GeneratorController < ApplicationController
       # Print to console :
     end
   end
+    
+   string = open("|sudo internal/Slic3r/slic3r.pl " + gcode_string  + stlLocation).read()
 
-  string = open("|sudo internal/Slic3r/slic3r.pl " + gcode_string  + stlLocation).read()
-  send_file @gcodefile
+  # Get the filament_diameter from the gcode file
+  f = File.open("#{@gcodefile}", "r")
+  f.each_line do |line|
+    if line.include? "filament_diameter"
+      filament_diameter = line[/\d+/].to_i
+      break
+    end
+  end
+  f.close
+  
+#   
+#   # Get extrusion results from script : 
+  readme = `perl internal/filement_metrics/filament_length.pl -d #{filament_density} -s #{filament_diameter} -f #{@gcodefile}`
+#   
+  @output = @gcodefile, readme
+  
+  render :text => @output.inspect
+  
+  # send_file @gcodefile
+
   # render :text => "|sudo internal/Slic3r/slic3r.pl " + gcode_string  + stlLocation
   end
 end

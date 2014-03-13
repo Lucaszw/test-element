@@ -29,6 +29,15 @@ ActiveRecord::Schema.define(version: 20140222020008) do
     t.integer  "user_model_id"
   end
 
+  create_table "model_uploads", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "stlfile_file_name"
+    t.string   "stlfile_content_type"
+    t.integer  "stlfile_file_size"
+    t.datetime "stlfile_updated_at"
+  end
+
   create_table "print_options", force: true do |t|
     t.float    "nozzle_diameter"
     t.float    "center_of_print_x"
