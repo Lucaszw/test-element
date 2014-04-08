@@ -16,11 +16,10 @@ class CommentsController < ApplicationController
 			:rating => nil)
 
 		@model.comments << @comment
-  	  	@model.save
+  	@model.save
 
-  	  	redirect_to :controller => 'model_objects', :action => "single", :id=> @model.id
+  	redirect_to :controller => 'model_objects', :action => "single", :id=> @model.id
 
-		# render text: params[:comments][:model_id]
 	end
 	def new	
 	end

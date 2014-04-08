@@ -1,56 +1,105 @@
 = stylesheet_link_tag "fancybox"
+= stylesheet_link_tag "galleryView"
+
+= javascript_include_tag "model_objects/imagesloaded"
+= javascript_include_tag "model_objects/wookmark"
+= javascript_include_tag "model_objects/scrollTo"
 = javascript_include_tag "model_objects/model_objects"
+  
+= render :controller => "model_objects", :action => "categoryList", :template => "model_objects/categoryList"
+#main_content
+  #gallery_home_container.gallery_container
+    #main{role: "main"}
 
-
-#pageWrapper{:style => "min-width:1500px;"}
-  / Categories Menu :
-  %div{:style => "display:inline;"}
-    = render :controller => "model_objects", :action => "categoryList", :template => "model_objects/categoryList"
-    
-    / Gallery :
-    - i = 0
-    - k = 0
-    #gallery_container{:style => "min-width:1000px;float:left;text-align:left;padding-left:30px;margin-top:40px;"}
-      - @models.each do |model|
-        %div{:style => "display:inline-block;vertical-align: top;"}
-          %div{:id => "model_#{k}", :style => "margin: 0px 8px 8px 0px;background-color:white;padding:10px;border: 1px solid #eaeaea;"}
-            %div{"data-no-turbolink" => ""}
+      %ul#tiles
+        - k = 0
+        - @models.each do |model|
+          %li
+            .single{:id => "model_#{k}"}
               = link_to(model_objects_canvas_path(:modelid => model.id), :remote => true ) do
-                = image_tag model.thumbnail.url, :id => "#{model.id}", :style => "width:205px;", :class => "model_image"
-              %div{"data-no-turbolink" => ""}
-                %h3= link_to model.name, model_objects_single_path(:id => model.id)
-        - i += 1
-        - k += 1
-        - if i == 4
-          - i = 0
-          %br
+                = image_tag model.thumbnail.url, :id => "#{model.id}", :style => "width:170px;", :class => "model_image"
+              %p{"data-no-turbolink" => ""}
+                %h3{"data-no-turbolink" => ""}= link_to model.name, model_objects_single_path(:id => model.id)
+          - k += 1
+  :javascript
+    (function ($){
+        var oldwidth = $( window ).width();
+        var newwidth = oldwidth - 180;
+        $(".gallery_container").css("width", newwidth+"px");
+        $( window ).resize(function() {
+          var oldwidth = $( window ).width();
+          var newwidth = oldwidth - 180;
+          $(".gallery_container").css("width", newwidth+"px");
+        });
 
+        $.easing.elasout = function (x, t, b, c, d) {
+          // Linear Easing effect :
+            return c*t/d + b;
+          };
+     
+        var $tiles = $('#tiles'),
+            $handler = $('li', $tiles),
+            $main = $('#main'),
+            $window = $(window),
+            $document = $(document),
+            options = {
+              autoResize: true, // This will auto-update the layout when the browser window is resized.
+              container: $main, // Optional, used for some extra CSS styling
+              offset: 20, // Optional, the distance between grid items
+              itemWidth: 200 // Optional, the width of a grid item
+            };
+        $( "#scrollbutton" ).click(function() {
+          $window.scrollTo( "#main_content",300, {easing:'elasout'}  );
+        });
 
-:coffee
-  $(window).bind "load", ->
-    first = 4
-    last = #{k};
-    i = first
-    while i < last
-      element1 = document.getElementById("model_" + parseInt(i - 4))
-      element2 = document.getElementById("model_" + i)
-      top_margin = (element1.offsetTop + element1.offsetHeight) - element2.offsetTop + 10
-      $("#model_" + i).css "margin-top", top_margin
-      i++
+        /**
+         * Reinitializes the wookmark handler after all images have loaded
+         */
+        function applyLayout() {
+          $tiles.imagesLoaded(function() {
+            // Destroy the old handler
+            if ($handler.wookmarkInstance) {
+              $handler.wookmarkInstance.clear();
+            }
+            // Create a new layout handler.
+            $handler = $('li', $tiles);
+            $handler.wookmark(options);
+          });
+        }
 
-:css
-  table {
-    width: 20%;
-    float:left;
-  }
-  .table_inner {
-    background-color:white;
-    padding:2px;
-  }
-  #td_top {
-    width: 200px;
-    min-height: 10px;
-  }
+        /**
+         * When scrolled all the way to the bottom, add more tiles
+         */
+        function onScroll() {
+          // Get the page position :
+            var scrolltop = $(document).scrollTop();
+            if (scrolltop > window.mintop){
+              $('#navigation').css("display", "block");
+               $('#cssmenu').css("display", "block");
+            }else {
+              $('#navigation').css("display", "none");
+              $('#cssmenu').css("display", "none");
+            }
+
+          // Check if we're within 100 pixels of the bottom edge of the broser window.
+          var winHeight = window.innerHeight ? window.innerHeight : $window.height(), // iphone fix
+              closeToBottom = ($window.scrollTop() + winHeight > $document.height() - 100);
+
+          if (closeToBottom) {
+            // Get the first then items from the grid, clone them, and add them to the bottom of the grid
+            var $items = $('li', $tiles),
+                $firstTen = $items.slice(0, 10);
+            $tiles.append($firstTen.clone());
+
+            applyLayout();
+          }
+        };
+
+        // Call the layout function for the first time
+        applyLayout();
+        // Capture scroll event.
+        $window.bind('scroll.wookmark', onScroll);
+      })(jQuery);
 
 #ajaxView
 

@@ -7,7 +7,6 @@
 
 :coffee
   $(document).ready ->
-
     # renderer, loader, scene,
     height = if (#{iframe}) then $(window).height()-120 else $(window).height/2
     width = if (#{iframe}) then $(window).width() else $(window).width()/2
@@ -17,6 +16,7 @@
 
     window.scene.remove(window.mesh)
     
+    window.setupControls()
 
     window.loader.load "#{model.stlfile.url}"
     window.animate()

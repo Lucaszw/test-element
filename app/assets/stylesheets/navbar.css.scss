@@ -1,85 +1,104 @@
-// Place all the styles related to the navbar controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#navigation .text {
+ display: block;
+ line-height: 32px;
 
-#navbar {
-	min-width:800px;
-        z-index: 1;
-	background-color: #ffffff;
-	color:#303030;
-	padding-top: 8px;
-	padding-bottom: 8px;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-	color: #585858;
-	position: fixed;
-	font-family: "Helvetica Narrow","Arial Narrow",Tahoma,Arial,Helvetica,sans-serif;
-	top:0px;
-	width: 100%;
-	border-bottom:1px solid #eeeeee;
-	font-size :15px;
-	a{
-		font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-		font-size: 14px;
-		color:#13a1fd;
-		font-weight: 500;
-	}
-	p {
-		margin-left:5px;
-		margin-right:5px;
-		margin: 4px;
-		
-	}
-	p.right {
-		float:right;
-	}
-	p.left {
-		float:left;
-		margin-left:10px;
-		margin-top: 7px;
-	}
-	img {
-		margin-top: -10px;
-	}
 }
-form {
-	display: inline;
+.text {
+  font-family: 'Open Sans', sans-serif;
+  text-decoration: none;
+  color:#858585;
+  font-size:12px;
 }
 
+#navigation a {
+  text-decoration: none;
+}
+#navigation {
+  display: inline;
+  width: 100%;
+  height:45px;
+  position: fixed;
+  z-index: 1000;
+  top:0px;
+  left:0px;
+  display: none;
+  border-bottom: 1px solid #dcdcdc;
+  padding-top: 5px;
+  background: #f8f8f8;
+}
+#navigation div{
+  float:left;
+  width:33%;
+}
+#navigation .left{
+  text-align: left;
+}
+#navigation .right {
+  text-align: right;
+  position: relative;
+  z-index: 1000;
+}
+#navigation .right a{
+  position: relative;
+  z-index: 3000;
+}
+#navigation .center {
+  text-align: center;
+}
 
-#user_name, #user_password {
-	width:100px;
-	background-color:#ffffff;
+#navigation .button {
+  display: inline-block;
+  min-width: 20px;
+  margin-left: 10px;
+  line-height: 30px;
+  padding: 0 10px;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+  background: #8c96a4;
+  border: 1px solid;
+  border-color: #8c8f9a #78828b #6e6e6e;
+  background-image: -webkit-linear-gradient(top, #a9b5c4, #848d9b 90%);
+  background-image: -moz-linear-gradient(top, #a9b5c4, #848d9b 90%);
+  background-image: -o-linear-gradient(top, #a9b5c4, #848d9b 90%);
+  background-image: linear-gradient(to bottom, #a9b5c4, #848d9b 90%);
+  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.15), inset 0 0 1px 1px rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.15), inset 0 0 1px 1px rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+#navigation .button:first-child {
+  border-radius: 3px 0 0 3px;
+}
+#navigation .button:last-child {
+  border-radius: 0 3px 3px 0;
+}
+#navigation .button:only-child {
+  border-radius: 3px;
+}
+#navigation .button + #navigation .button {
+  position: relative;
+  margin-left: -1px;
+}
+#navigation .button:active {
+  background: #848d9b;
+  border-color: #6e6e6e #78828b #78828b;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px rgba(255, 255, 255, 0.3);
+}
 
-	border: 1px solid #e3e3e3;
-	text-align:center;
+#navigation .button-blue {
+  background: #6990d1;
+  border-color: #687ebb #5f74a6 #4e6198;
+  margin:0px;
+  background-image: -webkit-linear-gradient(top, #8eb7e0, #5f85cc 90%);
+  background-image:    -moz-linear-gradient(top, #8eb7e0, #5f85cc 90%);
+  background-image:      -o-linear-gradient(top, #8eb7e0, #5f85cc 90%);
+  background-image:   linear-gradient(to bottom, #8eb7e0, #5f85cc 90%);
 }
-input, select {
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	border: none;
-	padding:5px 20px;
-}
-select {
-	width: 191px;
-}
-input[type="submit"] {
-	background-color: #f2f2f2;
-	border: 1px solid #ebebeb;
-}
-#search_text {
-		border: 1px solid #ebebeb;
-		background: #ffffff; /* Old browsers */
-		color: #d8d8d8;
-		&:focus {
-			outline:0px !important;
-    -webkit-appearance:none;
-			color:#4783c3;
-			-webkit-box-shadow: 0px 0px 3px 0px #c6ddea;
--moz-box-shadow:    0px 0px 3px 0px #c6ddea;
-box-shadow:         0px 0px 3px 0px #c6ddea;
-border-color: #4783c3;
-		}
+#navigation .button-blue:active {
+  background: #5f85cc;
+  border-color: #4e6198 #5f74a6 #5f74a6;
 }

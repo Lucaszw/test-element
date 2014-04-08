@@ -8,7 +8,7 @@ Lanilabs::Application.routes.draw do
   # get "home/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-
+  get 'about/index' => 'about#index', :as => 'about'
   get 'model_objects/canvas' => 'model_objects#canvas', :as => 'model_objects_canvas'
   get 'model_objects/add_to_cart' => 'model_objects#add_to_cart', :as => 'model_objects_add_to_cart'
   # match '/3Dcanvas' => 'model_objects#canvas', via: [:get, :post]

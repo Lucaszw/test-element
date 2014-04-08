@@ -5,6 +5,24 @@
 
 THREE.TrackballControls = function ( object, domElement ) {
 
+
+  this.getBoundingClientRect = function( element ){
+
+    var bounds = element !== document ? element.getBoundingClientRect() : {
+        left: 0,
+        top: $('html').offset().top,
+        width: window.innerWidth,
+        height: window.innerHeight
+    };
+
+    if( element !== document ){
+        var d = element.ownerDocument.documentElement;
+        bounds.left += window.pageXOffset - d.clientLeft;
+        bounds.top  += window.pageYOffset - d.clientTop;
+    }
+     return bounds;
+  }
+
   var _this = this;
   var STATE = { NONE: -1, ROTATE: 0, ZOOM: 1, PAN: 2, TOUCH_ROTATE: 3, TOUCH_ZOOM: 4, TOUCH_PAN: 5 };
 
@@ -15,7 +33,8 @@ THREE.TrackballControls = function ( object, domElement ) {
 
   this.enabled = true;
 
-  this.screen = { left: 0, top: 0, width: 0, height: 0 };
+  // this.screen = { left: 0, top: 0, width: 0, height: 0 };
+  this.screen = this.getBoundingClientRect(this.domElement);
 
   this.rotateSpeed = 1.0;
   this.zoomSpeed = 1.2;
@@ -71,6 +90,8 @@ THREE.TrackballControls = function ( object, domElement ) {
 
 
   // methods
+
+
 
   this.handleResize = function () {
 
@@ -396,10 +417,9 @@ THREE.TrackballControls = function ( object, domElement ) {
       _state = event.button;
 
     }
-
     if ( _state === STATE.ROTATE && !_this.noRotate ) {
 
-      _this.getMouseProjectionOnBall( event.pageX, event.pageY, _rotateStart );
+      _this.getMouseProjectionOnBall( event.pageX, event.pageY-window.pageYOffset, _rotateStart );
       _rotateEnd.copy(_rotateStart)
 
     } else if ( _state === STATE.ZOOM && !_this.noZoom ) {
@@ -430,7 +450,7 @@ THREE.TrackballControls = function ( object, domElement ) {
 
     if ( _state === STATE.ROTATE && !_this.noRotate ) {
 
-      _this.getMouseProjectionOnBall( event.pageX, event.pageY, _rotateEnd );
+      _this.getMouseProjectionOnBall( event.pageX, event.pageY-window.pageYOffset, _rotateEnd );
 
     } else if ( _state === STATE.ZOOM && !_this.noZoom ) {
 
