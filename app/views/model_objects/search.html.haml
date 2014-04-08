@@ -1,0 +1,6 @@
+= render template: "navbar/index"
+= render template: "model_objects/galleryView"
+:javascript
+  $( document ).ready(function() {
+    $( "#search_field" ).val("#{@searchedFor}");
+  });

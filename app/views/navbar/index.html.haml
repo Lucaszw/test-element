@@ -1,0 +1,51 @@
+%br/
+%br/
+= stylesheet_link_tag "navbar"
+#navigation
+  .left
+    - if @user.id != nil
+      %span{:style => "padding-top:6px;padding-left:3px;float:left;"}#{@user.name}
+      %div{:style => "width:155px;display:block;"}
+        = link_to "Log out", navbar_logout_path, {:class => "button"}
+        = link_to "Edit Profile", profiles_edit_path, {:class => "button button-blue", :style=>"margin-left:-5px;"}
+    - else
+      = form_for @user, url: {controller: "navbar" ,action: "create"}, :html => {:id => "login_form"} do |f|
+        %div{:style => "width:180px;"}  
+          .btn-group{style: "position:relative; z-index:5000;"}
+            %button.button.dropdown-toggle{"data-toggle" => "dropdown", type: "button"}
+              Login
+            %span.caret{:style => "border-top-color: white !important; border-bottom-color: white !important;box-shadow:1px solid;  -webkit-box-shadow: 0 8px 6px -6px black;"}
+            %ul.dropdown-menu
+              %li
+                %span= f.label "Name :"
+                %span= f.text_field :name
+              %li
+                %span= f.label "Password :"
+                %span= f.password_field :password
+              %li
+                %br
+                %a.button.button-blue#login_dropdown{:onclick => " $('#login_form').submit();"}
+                  Log In                
+          = link_to "Sign Up ", new_profile_path, {:class => "button button-blue",:id=>"login_hidden"}
+             
+  .center
+    %span{"data-no-turbolink" => ""}
+      = link_to image_tag("logo_dark.png", :width => "30"), {:action => 'index', :controller => 'home'}
+    -# %img{src: "/assets/logo_dark.png", width: "30"}
+  .right
+    = link_to "Learn More", about_path, :class => "text"
+
+:javascript
+  $( document ).ready(function( $ ) {
+    if(isNaN(parseInt($('#header').css("height")))){
+      window.mintop = -100;
+      $('#navigation').css("display", "block");
+      $('#cssmenu').css("display", "block");
+      $('#main_content').css({
+        "padding-top" : "0px",
+        "margin-top"  : "0px"
+      });
+    }else {
+      window.mintop = parseInt($('#header').css("height"))-40;
+    }
+  });
