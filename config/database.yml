@@ -17,4 +17,4 @@ development:
   pool: 5
   username: root
   password: root
-  socket: /Applications/MAMP/tmp/mysql/mysql.sock
+  socket: /run/mysqld/mysqld.sock
