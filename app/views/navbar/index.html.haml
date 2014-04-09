@@ -5,7 +5,7 @@
   .left
     - if @user.id != nil
       %span{:style => "padding-top:6px;padding-left:3px;float:left;"}#{@user.name}
-      %div{:style => "width:155px;display:block;"}
+      %span{:style => "display:block;"}
         = link_to "Log out", navbar_logout_path, {:class => "button"}
         = link_to "Edit Profile", profiles_edit_path, {:class => "button button-blue", :style=>"margin-left:-5px;"}
     - else
