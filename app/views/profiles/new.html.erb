@@ -1,15 +1,11 @@
 <%= render template: "navbar/index" %>
-
 <%= form_for :user, url: {controller: "profiles" ,action: "create"} do |f| %>
-<h1>New : </h1>
+<h1 style="width:100px;">New : </h1>
 <%= f.label "Name :"%>
   <%= f.text_field :name %>
 
   <%= f.label "Password :"%>
-  <%= f.text_field :password %>
+  <%= f.password_field :password %>
 
- <%= f.label "Sketchfab Token :"%>
- <%= f.text_field :sketchfab_token %>
-
-    <%= f.submit %>
+  <%= f.submit %>
 <% end %>

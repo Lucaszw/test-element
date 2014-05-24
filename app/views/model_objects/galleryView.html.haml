@@ -6,7 +6,6 @@
 = javascript_include_tag "model_objects/scrollTo"
 = javascript_include_tag "model_objects/model_objects"
   
-= render :controller => "model_objects", :action => "categoryList", :template => "model_objects/categoryList"
 #main_content
   #gallery_home_container.gallery_container
     #main{role: "main"}
@@ -49,7 +48,7 @@
               itemWidth: 200 // Optional, the width of a grid item
             };
         $( "#scrollbutton" ).click(function() {
-          $window.scrollTo( "#main_content",300, {easing:'elasout'}  );
+          $window.scrollTo( "#model_0",300, {easing:'elasout'}  );
         });
 
         /**

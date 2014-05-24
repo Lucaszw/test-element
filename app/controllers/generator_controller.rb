@@ -25,13 +25,17 @@ class GeneratorController < ApplicationController
    "," + params[:generator][:center_of_print_y]
   params[:generator].delete :center_of_print_x
   params[:generator].delete :center_of_print_y
-  params[:generator][:print_center] = center_point
+  if (center_point != ",") 
+    params[:generator][:print_center] = center_point
+  end
 
   bed_size = params[:generator][:bed_size_x] + 
   "," + params[:generator][:bed_size_y]
   params[:generator].delete :bed_size_x
   params[:generator].delete :bed_size_y
-  params[:generator][:bed_size] = bed_size
+  if (bed_size != ",") 
+    params[:generator][:bed_size] = bed_size
+  end
   
   
   # Get the in-fill density as it is not directly defined for some reason
@@ -71,29 +75,43 @@ class GeneratorController < ApplicationController
       # Print to console :
     end
   end
-    
-   string = open("|sudo internal/Slic3r/slic3r.pl " + gcode_string  + stlLocation).read()
 
-  # Get the filament_diameter from the gcode file
-  f = File.open("#{@gcodefile}", "r")
-  f.each_line do |line|
-    if line.include? "filament_diameter"
-      filament_diameter = line[/\d+/].to_i
-      break
-    end
+   
+
+  didMakeGcode = "";
+  command = Thread.new do
+     didMakeGcode = system "sudo perl internal/Slic3r/slic3r.pl #{gcode_string + stlLocation}"
   end
-  f.close
+# Make sure that the gcode is developed before continuing...
+  command.join
   
-#   
-#   # Get extrusion results from script : 
-  readme = `perl internal/filement_metrics/filament_length.pl -d #{filament_density} -s #{filament_diameter} -f #{@gcodefile}`
-#   
-  @output = @gcodefile, readme
+   # Create readme for when errors occur (overwritten if file generated successfully)
+   readme = "Please check your STL file..."  
+   
+# #    Get the filament_diameter from the gcode file
+    if(didMakeGcode == true)
+      f = File.open("#{@gcodefile}", "r")
+      f.each_line do |line|
+        if line.include? "filament_diameter"
+          filament_diameter = line[/\d+/].to_i
+          break
+        end
+      end
+      f.close
+      readme = `perl internal/filement_metrics/filament_length.pl -d #{filament_density} -s #{filament_diameter} -f #{@gcodefile}`
+    end
+
   
-  render :text => @output.inspect
+  # Get extrusion results from script : 
+   
+#   
+     @output = @gcodefile, readme
+  
+#     render :text => didMakeGcode
+    render :text => @output.inspect
   
   # send_file @gcodefile
 
-  # render :text => "|sudo internal/Slic3r/slic3r.pl " + gcode_string  + stlLocation
+#    render :text => "|sudo internal/Slic3r/slic3r.pl " + gcode_string  + stlLocation
   end
 end

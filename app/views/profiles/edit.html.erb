@@ -1,20 +1,33 @@
 <%= render template: "navbar/index" %>
-
-<h1>Edit : </h1>
-
-
-
-<%= form_for @user, url: {controller: "profiles" ,action: "update"} do |f| %>
-		<%= f.label "Name :"%>
-		<%= f.text_field :name %>
-
-		<%= f.label "Password :"%>
-		<%= f.password_field :password %>
-
-		<%= f.submit("Save Changes") %>
-
-		
-	<% end %>
-
-<%= link_to "Create New Model", controller: "model_objects", action: "new" %>
+<table style="width:100%;">
+  <tr>
+  <td style="width:180px;">
+  <%= render :controller => "model_objects", :action => "categoryList", :template => "model_objects/categoryList" %>
+  </td>
+  <td style="">
+    <div style="margin-left:auto;margin-right:auto;width:700px;">
+      <h1>Edit : </h1>
+      
+      <%= form_for @user, url: {controller: "profiles" ,action: "update"} do |f| %>
+      		<%= f.label "Name :"%>
+      		<%= f.text_field :name %>
+      
+      		<%= f.label "Password :"%>
+      		<%= f.password_field :password %>
+      
+      		<%= f.submit("Save Changes") %>
+      
+      		
+      	<% end %>
+      
+      <%= link_to "Create New Model", controller: "model_objects", action: "new" %>
+    </div>
+  </td>
+  </tr>
+</table>
 <%= render file: "model_objects/galleryView" %>
+<style>
+  td+td {
+    width: auto;
+  }
+</style>

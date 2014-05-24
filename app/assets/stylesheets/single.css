@@ -92,13 +92,14 @@
   #info .content {
     color: white;
     font-family: "Open Sans";
+    overflow: visible;
 
   }
   #info .tag {
     background-color: rgba(49, 30, 26,0.5);
     padding: 4px 5px;
     border-radius: 6px;
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 600;
   }
   #info .title{

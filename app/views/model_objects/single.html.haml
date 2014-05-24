@@ -35,7 +35,8 @@
                 %br
                 %br
                 %br
-                = link_to "Print" , generator_form_path(:modelid => @model.id), :class => "button"
+                %span{"data-no-turbolink" => ""}
+                  = link_to "Print" , generator_form_path(:modelid => @model.id), :class => "button"
                 = link_to "Add to cart" , model_objects_add_to_cart_path(:modelid => @model.id), :class => "button", :style => "background-color:#409850;"
               %li#bottom
                 .item

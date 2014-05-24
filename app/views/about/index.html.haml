@@ -3,8 +3,9 @@
 = stylesheet_link_tag "about/about"
 = stylesheet_link_tag "font-awesome.min"
 .container
-  = link_to home_index_path, {:style => "position:fixed;top:20px;left:10px;z-index:1000;"} do
-    %i.fa.fa-home.fa-2x{style: "color:white;opacity:0.50;"}
+  %span{"data-no-turbolink" => ""}
+    = link_to home_index_path, {:style => "position:fixed;top:20px;left:10px;z-index:1000;"} do
+      %i.fa.fa-home.fa-2x{style: "color:white;opacity:0.50;"}
   %header
     %h1
       lani is more than just

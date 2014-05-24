@@ -6,8 +6,10 @@
     - if @user.id != nil
       %span{:style => "padding-top:6px;padding-left:3px;float:left;"}#{@user.name}
       %span{:style => "display:block;"}
-        = link_to "Log out", navbar_logout_path, {:class => "button"}
-        = link_to "Edit Profile", profiles_edit_path, {:class => "button button-blue", :style=>"margin-left:-5px;"}
+        %span{"data-no-turbolink" => ""} 
+          = link_to "Log out", navbar_logout_path, {:class => "button"}
+        %span{"data-no-turbolink" => ""} 
+          = link_to "Edit Profile", profiles_edit_path, {:class => "button button-blue", :style=>"margin-left:-5px;"}
     - else
       = form_for @user, url: {controller: "navbar" ,action: "create"}, :html => {:id => "login_form"} do |f|
         %div{:style => "width:180px;"}  
@@ -25,8 +27,10 @@
               %li
                 %br
                 %a.button.button-blue#login_dropdown{:onclick => " $('#login_form').submit();"}
-                  Log In                
-          = link_to "Sign Up ", new_profile_path, {:class => "button button-blue",:id=>"login_hidden"}
+                  %span{"data-no-turbolink" => ""}
+                    Log In   
+          %span{"data-no-turbolink" => ""}             
+            = link_to "Sign Up ", new_profile_path, {:class => "button button-blue",:id=>"login_hidden"}
              
   .center
     %span{"data-no-turbolink" => ""}
