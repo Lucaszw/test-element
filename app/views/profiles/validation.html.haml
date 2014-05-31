@@ -1,0 +1,31 @@
+= render template: "navbar/index"
+%br
+= form_for :user, url: {controller: "profiles" ,action: "checkIfValidated" },:html => {:id => "generator"} do |f|
+  .col-6.col-sm-4.col-lg-4
+    .input-group
+      %span.input-group-addon
+        = f.label "Enter Verification Code :"
+      = f.text_field :verificationcode, :class => "form-control"
+    %br
+      
+    .input-group
+      %span.input-group-addon
+        = f.label "Name :"
+      = f.text_field :name, :class => "form-control"
+    %br
+      
+    .input-group
+      %span.input-group-addon
+        = f.label "Password :"
+      = f.password_field :password, :class => "form-control" 
+    %br
+          
+    .input-group
+      %span.input-group-addon
+        = f.label "Email :"
+      = f.text_field :email, :class => "form-control"
+    %br
+      
+    %button.btn.btn-default.btn{:onclick => " $('#generator').submit();" , :type => "button"}
+      %span.fa.fa-gift
+      Submit
