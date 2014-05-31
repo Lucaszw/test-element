@@ -12,14 +12,17 @@ Lanilabs::Application.routes.draw do
   get 'model_objects/canvas' => 'model_objects#canvas', :as => 'model_objects_canvas'
   get 'model_objects/add_to_cart' => 'model_objects#add_to_cart', :as => 'model_objects_add_to_cart'
   # match '/3Dcanvas' => 'model_objects#canvas', via: [:get, :post]
-
+  
+#   map.connect "thumb/*specs", :controller => "thumb", :action => "index"
 
   # You can have the root of your site routed with "root"
    root 'home#index'
 
   # Example of regular route:
      # get 'products/:id' => 'catalog#view'
-
+  
+  post 'profiles/checkIfValidated' => 'profiles#checkIfValidated'
+  get 'profiles/validation' => 'profiles#validation'
   get 'generator/form' => 'generator#form'
   match 'generator/download' => 'generator#download', via: [:get, :post]
   post 'generator/submit' => 'generator#submit'

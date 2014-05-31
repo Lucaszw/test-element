@@ -54,6 +54,10 @@ class ModelObjectsController < ApplicationController
     else
       @user = User.new
     end
+    
+#     Generate all 4 Gcode:
+  
+
   end 
 
 

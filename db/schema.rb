@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140313033241) do
+ActiveRecord::Schema.define(version: 20140531014340) do
 
   create_table "catagories", force: true do |t|
     t.datetime "created_at"
@@ -157,6 +157,8 @@ ActiveRecord::Schema.define(version: 20140313033241) do
     t.datetime "updated_at"
     t.text     "sketchfab_token"
     t.string   "email"
+    t.integer  "verificationcode"
+    t.boolean  "didVerify"
   end
 
 end
