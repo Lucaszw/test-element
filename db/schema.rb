@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140531014340) do
+ActiveRecord::Schema.define(version: 20140607044754) do
 
   create_table "catagories", force: true do |t|
     t.datetime "created_at"
@@ -148,6 +148,7 @@ ActiveRecord::Schema.define(version: 20140531014340) do
     t.integer  "thumbnail_file_size"
     t.datetime "thumbnail_updated_at"
     t.float    "price"
+    t.string   "calculated_volumes"
   end
 
   create_table "users", force: true do |t|
