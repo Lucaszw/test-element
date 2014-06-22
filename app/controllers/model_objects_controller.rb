@@ -39,9 +39,11 @@ class ModelObjectsController < ApplicationController
   end
 
 
-  def galleryView
-  end
-
+   def tile
+     # @model = UserModel.offset(params[:k]).last(1)
+#      @k     = params[:k]
+   end
+  
   def canvas
     @model = UserModel.find(params[:modelid])
     puts @model.id
@@ -54,10 +56,6 @@ class ModelObjectsController < ApplicationController
     else
       @user = User.new
     end
-    
-     
-        
-#     render :text => readme
     
   end 
 

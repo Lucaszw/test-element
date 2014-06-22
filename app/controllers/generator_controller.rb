@@ -1,5 +1,6 @@
 class GeneratorController < ApplicationController
   def form
+   
     @model = UserModel.find(params[:modelid])
     if session[:id] != nil
       @user = User.find(session[:id])

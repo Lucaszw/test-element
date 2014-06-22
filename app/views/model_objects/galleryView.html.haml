@@ -5,23 +5,22 @@
 = javascript_include_tag "model_objects/wookmark"
 = javascript_include_tag "model_objects/scrollTo"
 = javascript_include_tag "model_objects/model_objects"
-  
+
+- # Keep track of how many models have been loaded : 
 #main_content
   #gallery_home_container.gallery_container
     #main{role: "main"}
 
       %ul#tiles
-        - k = 0
-        - @models.each do |model|
-          %li
-            .single{:id => "model_#{k}"}
-              = link_to(model_objects_canvas_path(:modelid => model.id), :remote => true ) do
-                = image_tag model.thumbnail.url, :id => "#{model.id}", :style => "width:170px;", :class => "model_image"
-              %p{"data-no-turbolink" => ""}
-                %h3{"data-no-turbolink" => ""}= link_to model.name, model_objects_single_path(:id => model.id)
-          - k += 1
+        - @models.last(3).each.with_index do |model, index|
+          = render(:partial => "model_objects/model_tile", :locals => {model: model, k: index})
+        
+
   :javascript
     (function ($){
+    
+        window.tile_index = 3;
+        
         var oldwidth = $( window ).width();
         var newwidth = oldwidth - 180;
         $(".gallery_container").css("width", newwidth+"px");
@@ -83,15 +82,18 @@
           // Check if we're within 100 pixels of the bottom edge of the broser window.
           var winHeight = window.innerHeight ? window.innerHeight : $window.height(), // iphone fix
               closeToBottom = ($window.scrollTop() + winHeight > $document.height() - 100);
-
+                
           if (closeToBottom) {
             // Get the first then items from the grid, clone them, and add them to the bottom of the grid
-            var $items = $('li', $tiles),
-                $firstTen = $items.slice(0, 10);
-            $tiles.append($firstTen.clone());
+            //var $items = $('li', $tiles),
+                //$firstTen = $items.slice(0, 10);
 
+          
+            
             applyLayout();
           }
+                        
+
         };
 
         // Call the layout function for the first time

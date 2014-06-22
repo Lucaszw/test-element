@@ -1,0 +1,6 @@
+%li
+  .single{:id => "model_#{k}"}
+    = link_to(model_objects_canvas_path(:modelid => model.id), :remote => true ) do
+      = image_tag model.thumbnail.url, :id => "#{model.id}", :style => "width:170px;", :class => "model_image"
+    %p{"data-no-turbolink" => ""}
+      %h3{"data-no-turbolink" => ""}= link_to model.name, model_objects_single_path(:id => model.id)
