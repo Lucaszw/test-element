@@ -1,5 +1,6 @@
 Lanilabs::Application.routes.draw do
 
+ 
   get "model_objects/index"
   get "profiles/edit"
   get "home/index"
@@ -9,9 +10,9 @@ Lanilabs::Application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   get 'about/index' => 'about#index', :as => 'about'
-  get 'model_objects/model_tile' => 'model_objects#tile', :as => 'model_objects_tile' 
-  get 'model_objects/canvas' => 'model_objects#canvas', :as => 'model_objects_canvas'
-  get 'model_objects/add_to_cart' => 'model_objects#add_to_cart', :as => 'model_objects_add_to_cart'
+#   get  'generator/sendSTL' => ''
+  post 'model_objects/model_tile' => 'model_objects#model_tile', :as => 'model_objects_tile' 
+  post 'model_objects/canvas' => 'model_objects#canvas', :as => 'model_objects_canvas'
   # match '/3Dcanvas' => 'model_objects#canvas', via: [:get, :post]
   
 #   map.connect "thumb/*specs", :controller => "thumb", :action => "index"
@@ -24,6 +25,7 @@ Lanilabs::Application.routes.draw do
   
   post 'profiles/checkIfValidated' => 'profiles#checkIfValidated'
   get 'profiles/validation' => 'profiles#validation'
+  get 'generator/w_printform' => 'generator#w_printform', :as => 'print_at_uw'
   get 'generator/form' => 'generator#form'
   match 'generator/download' => 'generator#download', via: [:get, :post]
   post 'generator/submit' => 'generator#submit'

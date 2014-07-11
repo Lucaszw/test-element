@@ -38,15 +38,19 @@ class ModelObjectsController < ApplicationController
   	render "galleryView"
   end
 
-
-   def tile
-     # @model = UserModel.offset(params[:k]).last(1)
-#      @k     = params[:k]
-   end
+  def model_tile
+     @model = UserModel.find(:first, :order => "created_at DESC", :offset => params[:k])
+     @k     = params[:k]
+    render :text => "#{render_to_string :partial => "model_objects/model_tile" , locals: {model: @model} }"
+     
+  end
   
   def canvas
     @model = UserModel.find(params[:modelid])
+
     puts @model.id
+    render :text => "#{render_to_string :partial => "model_objects/canvas" , locals: {model: @model} }"
+    
     # @model = UserModel.find(params[:modelid])
   end
 
@@ -69,13 +73,15 @@ class ModelObjectsController < ApplicationController
     else
       @user = User.new
     end
-
+    
     @model = UserModel.find(params[:id])
     @modelsOwner = User.find(@model.user_id)
     @logged_in = false
+    
     if session[:id] != nil
       @logged_in = true
     end
+    
   	# Called when clicked on a model, param = :name
   end
 
@@ -149,6 +155,7 @@ class ModelObjectsController < ApplicationController
     @currentModel = UserModel.new
     @currentModel.update_attributes(params[:currentModel].permit!)
     modelname = params[:currentModel][:name]
+    @currentModel.calculated_volumes = (0..3).map { |i| "'" + " " + "'" }.join(",")
     @user.user_models << @currentModel
     @user.save!
  
@@ -171,18 +178,19 @@ class ModelObjectsController < ApplicationController
       "--layer-height","--first-layer-height", "--nozzle-diameter","--bed-size","--print-center",
       "--gcode-flavor","--fill-density"
     
+    # First gcode : high quality,  solid     
     gcode1 = "2","1","205","110",
             "0.127","0.127","0.205", "406,356", "203,178",
             "reprap", "0.9999"
-    
+    # Low quality, solid     
     gcode2 = "2","1","205","110",
              "0.33","0.33","0.33","406,356","203,178",
              "reprap", "0.9999"
-    
+    # High quality, sparse
     gcode3 = "2","1","205","110",
              "0.127","0.127","0.205","406,356","203,178", 
              "reprap", "0.34"
-    
+    # Low quality, sparse
     gcode4 = "2","1","205","110",
              "0.33","0.33","0.33", "406,356","203,178",
              "reprap", "0.42"
@@ -196,6 +204,7 @@ class ModelObjectsController < ApplicationController
     didMakeGcode = Array.new(4);
     
     for j in 0..3
+    
       output[j] = " "
       for i in 0..10
         output[j] << " " << basic_params[i] << " " << gcode[j][i]
@@ -205,7 +214,7 @@ class ModelObjectsController < ApplicationController
       command = Thread.new do
         didMakeGcode[j] = system "sudo perl internal/Slic3r/slic3r.pl #{stlLocation} #{output[j]}"
       end
-       
+      
       # Make sure that the gcode is developed before continuing...
       command.join
        
@@ -213,7 +222,7 @@ class ModelObjectsController < ApplicationController
       @metrics[j] = "error"  
       
       # Get the filament_diameter from the gcode file
-      if(didMakeGcode[j] == true)
+      if(didMakeGcode[j])
         f = File.open("#{files[j]}", "r")
           f.each_line do |line|
             if line.include? "filament_diameter"
@@ -222,22 +231,26 @@ class ModelObjectsController < ApplicationController
           end
         end
         f.close
-        
+                
         @volume[j] = `perl internal/filement_metrics/filament_length.pl -d #{gcode[j][basic_params.index("--fill-density")]} -s #{gcode[j][basic_params.index("--filament-diameter")]} -f #{files[j]}`
-
       end
 
     end
+    
+    
     @userModels = UserModel.where(:name => modelname).last
 #     UserModel.where(:user_id => @user.id).order(:created_at).last
     @userModels.calculated_volumes = @volume.map { |i| "'" + i.to_s + "'" }.join(",")
      
     @userModels.save! #The ! will cause it to save so long as no errors are catched in the model 
    
-  # If an error is catched, it won't render, and instead will active resuce
+  # If an error is catched, it won't render, and instead will activate rescue
    redirect_to :controller => 'model_objects', :action => 'single', :id => @currentModel.id
+   
    rescue
-   redirect_to :controller => 'model_objects', :action => 'new', :errors => @volume.map { |i| "'" + i.to_s + "'" }.join(",")
+    render :text => "Errors occured while uploading the model, or generating statistics"
+
+#    redirect_to :controller => 'model_objects', :action => 'new', :errors => @volume.map { |i| "'" + i.to_s + "'" }.join(",")
     
     
   end

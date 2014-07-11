@@ -16,12 +16,8 @@
         %ul#main
           #blur{:style => "background-image: url(#{@model.thumbnail.url});"}
           %li#top
-            -#  %div#thumbnail{"data-no-turbolink" => "", :style => "text-align:center;position:relative;display:block;"}
-            -#  = link_to(model_objects_canvas_path(:modelid => @model.id), :remote => true ) do
-            -#  = image_tag @model.thumbnail.url, :height => 250, :id => "icon"
             %div{"data-no-turbolink" => ""}
-              = link_to(model_objects_canvas_path(:modelid => @model.id), :remote => true ) do
-                #main_image{:style => "background-image: url(#{@model.thumbnail.url});"}
+              #main_image{:style => "background-image: url(#{@model.thumbnail.url});"}
             #info
               .title
                 = @model.name
@@ -36,8 +32,9 @@
                 %br
                 %br
                 %span{"data-no-turbolink" => ""}
-                  = link_to "Print" , generator_form_path(:modelid => @model.id), :class => "button"
-                = link_to "Add to cart" , model_objects_add_to_cart_path(:modelid => @model.id), :class => "button", :style => "background-color:#409850;"
+                  = link_to "Print @ Home" , generator_form_path(:modelid => @model.id), :class => "button"
+                %span{"data-no-turbolink" => "true"}
+                  = link_to "Print @ UW" , print_at_uw_path(:modelid => @model.id), :class => "button", :style => "background-color:#409850;"
               %li#bottom
                 .item
                   .count **
@@ -62,6 +59,7 @@
                     %h3= comment.description
               
 #ajaxView
+
 :javascript
   $( document ).ready(function() {
 
@@ -70,4 +68,18 @@
       opacity: 0.8,           // Falls back to a filter for IE.
       cssFilterSupport: true  // Use "-webkit-filter" where available.
     });
+    
+    $( '#main_image' ).click(function() {
+      return $.ajax({
+          type: "POST",
+          url: "#{model_objects_canvas_url}",
+          data: "modelid=" + #{@model.id},
+          dataType: "text",
+          success: function(data) {
+            return $("#ajaxView").html(data);
+          }
+        });
+    });
+    
   });
+

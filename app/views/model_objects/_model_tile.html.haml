@@ -1,6 +1,17 @@
 %li
-  .single{:id => "model_#{k}"}
-    = link_to(model_objects_canvas_path(:modelid => model.id), :remote => true ) do
-      = image_tag model.thumbnail.url, :id => "#{model.id}", :style => "width:170px;", :class => "model_image"
-    %p{"data-no-turbolink" => ""}
-      %h3{"data-no-turbolink" => ""}= link_to model.name, model_objects_single_path(:id => model.id)
+  .single{id: "model_#{@model.id}"}
+    %a{"data-no-turbolink" => "true", :href => "http://www.lanilabs.com/model_objects/single?id=#{model.id}"}
+      %img.glossy.image-wrap{src: "#{@model.thumbnail}", id: "#{@model.id}", style: "width:170px;", class: "model_image"}
+    %p
+      %h5 
+      
+        #{@model.name}
+        %a{onclick: "requestCanvas(#{@model.id})", style: "color: #191919;"}
+          %span#viewbutton.label.label-default{style: "cursor: hand;"}
+            View 3D
+      %h6 
+        @#{User.find(@model.user_id).name}
+        
+:sass
+  #viewbutton
+    cursor : pointer

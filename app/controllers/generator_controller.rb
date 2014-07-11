@@ -9,6 +9,67 @@ class GeneratorController < ApplicationController
     end
     
   end
+  def w_printform
+  
+    @errors = false
+    
+    # Grab the model :
+    @model = UserModel.find(params[:modelid])
+    
+    # Check if logged in, and load the navigation bar dependingly
+    if session[:id] != nil
+      @user = User.find(session[:id])
+    else
+      @user = User.new
+    end
+    
+    
+    begin
+      volumes = @model.calculated_volumes.delete("'").split(',').flatten.collect { |i| i.to_f }
+    rescue # StandardError
+      volumes = [0,0,0,0]
+      @errors = true
+    end
+
+    # Convert volumes to cubic inches :
+    volumes = volumes.collect { |i| i * 0.061} 
+      
+      
+    # Split into high and low quality     
+    @high_quality_volumes = volumes[0..1]
+    @low_quality_volumes  = volumes[2..3]
+            
+    # Multiplyer to UW:
+    begin
+      low_quality_uw  = @low_quality_volumes.collect { |i| i * 1.21}
+      high_quality_uw = @high_quality_volumes.collect { |i| i * 1.09}
+      
+      # Multiplyer for support material
+      # Originally 19.8 % and 26.2%, modified for higher accuracy    
+      low_quality_m1  = @low_quality_volumes.collect { |i| i * 0.23958}
+      high_quality_m1 = @high_quality_volumes.collect { |i| i * 0.28558}
+      
+      # Total price = sum of original model volume and support material
+      @low_quality_price  = low_quality_uw.zip(low_quality_m1).map { |x, y| (x + y)*9 }
+      @high_quality_price = high_quality_uw.zip(high_quality_m1).map { |x, y| (x + y)*12.25 }    
+    rescue
+      @errors = true
+    end 
+                            
+  end
+  
+  def send_stl
+    @errors = "no"
+    @model = params[:model]
+    begin
+      @currentUser = User.find(session[:id])
+      StlSender.stl_attatchment_email(@currentUser, @model)
+    rescue
+      @errors = "some"
+    end
+    render :text => "Email was sent, there were #{@errors} errors"
+  end
+  
   def download
     params[:gcode]
   end
