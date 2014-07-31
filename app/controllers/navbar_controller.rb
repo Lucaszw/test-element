@@ -14,8 +14,11 @@ class NavbarController < ApplicationController
         session[:id] = @user.id
         session[:username] = @user.name
         correct = "true"
+      else
+        error = false
       end
     end
+         
     redirect_to home_index_url and return
 
   end

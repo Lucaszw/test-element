@@ -1,8 +1,16 @@
 source 'https://rubygems.org'
 
+gem 'sidekiq'
+gem 'slim'
+gem 'puma'
+
+gem 'sinatra'
+
+gem 'faye-websocket'
+
+gem 'faye-redis'
 
 gem 'byebug'
-gem 'ruby-debug-passenger'
 
 gem 'paperclip', '~> 3.0'
 

@@ -75,7 +75,9 @@ class GeneratorController < ApplicationController
   end
 
   def submit
-
+  
+  HardWorker.perform_async() 
+  
   # get the url of the model being printed :
   model = UserModel.find(params[:generator][:modelid])
   params[:generator].delete :modelid
@@ -99,6 +101,7 @@ class GeneratorController < ApplicationController
     params[:generator][:bed_size] = bed_size
   end
   
+   
   
   # Get the in-fill density as it is not directly defined for some reason
   # In the g-code :

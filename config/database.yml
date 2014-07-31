@@ -14,7 +14,7 @@ development:
   adapter: mysql2
   encoding: utf8
   database: lanilabs_development
-  pool: 5
+  pool: 20
   username: root
-  password: root
+  password: 67E8B8AC57CA77A2F35AA541BC47BFCABCDACC6C
   socket: /run/mysqld/mysqld.sock

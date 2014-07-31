@@ -1,6 +1,16 @@
 Lanilabs::Application.routes.draw do
+  
+  require 'sidekiq/web'
+  mount Sidekiq::Web => '/sidekiq'
+    
+  get "sidekiq_test" => "sidekiq_test#test_page"
+  get "sidekiq_test_request" => "sidekiq_test#getRequest", :as => "getFromSidekiq"
+  #get "sidekiq_test/events" => "sidekiq_test#events"
+  
+  resources :sidekiq_test do 
+    collection {get :events}
+  end
 
- 
   get "model_objects/index"
   get "profiles/edit"
   get "home/index"
