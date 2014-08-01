@@ -1,0 +1,25 @@
+= javascript_include_tag "sidekiq_test"
+
+:coffee
+  window.sendData = -> 
+    $.ajax
+      url: "#{getFromSidekiq_url}"
+      data: "data="+$("#inputText").val()
+      success: (data) ->
+        data = JSON.stringify(data["data"]) 
+        $("#customLabel").text(data)
+        
+  #  window.client = new Faye.Client('http://www.lanilabs.com/faye');
+  #  client.subscribe "/messages/1234", (data) ->
+  #    $("#customLabel").text data
+    
+  
+%br
+.input-group
+  %input.form-control#inputText{placeholder: "Enter text", type: "text"}
+  %button.btn.btn-default{type: "button",  onclick: "window.sendData();"} submit
+  
+%h5
+  Response : 
+  - # Get the lastes message :
+  %span.label.label-default#customLabel= @lastMessage.text

@@ -1,0 +1,30 @@
+= render template: "navbar/index"
+%table{style: "width:100%;"}
+  %tr
+    %td{style: "width:180px;"}
+      = render :controller => "model_objects", :action => "categoryList", :template => "model_objects/categoryList"
+    %td{style: ""}
+      %div{style: "margin-left:auto;margin-right:auto;width:700px;"}
+        %h1 Edit :
+        = form_for @user, url: {controller: "profiles" ,action: "update"} do |f|
+          = f.label "Name :"
+          = f.text_field :name
+          = f.label "Password :"
+          = f.password_field :password
+          = f.label "Email :"
+          = f.text_field :email
+          - if @user.didVerify == false || @user.didVerify.nil?
+            %div{:style => "color:red;"}
+              not Verified
+          - else
+            %div{:style => "color:green;"}
+              Verified!            
+          
+          
+          = f.submit("Save Changes")
+        = link_to "Create New Model", controller: "model_objects", action: "new"
+= render file: "model_objects/galleryView"
+:css
+  td+td {
+    width: auto;
+  }

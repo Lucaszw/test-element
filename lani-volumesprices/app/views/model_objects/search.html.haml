@@ -1,0 +1,7 @@
+= render template: "navbar/index"
+= render :controller => "model_objects", :action => "categoryList", :template => "model_objects/categoryList"
+= render template: "model_objects/galleryView"
+:javascript
+  $( document ).ready(function() {
+    $( "#search_field" ).val("#{@searchedFor}");
+  });

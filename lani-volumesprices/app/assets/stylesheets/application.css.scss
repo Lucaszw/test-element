@@ -1,0 +1,111 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self 
+ *= require bootstrap
+ */
+
+@font-face {
+  font-family: "Raleway-Light";
+  src: url("../fonts/Raleway-Light.eot");
+}
+@font-face {
+  font-family: "Raleway-Thin";
+  src: url("../fonts/Raleway-Thin.eot");
+}
+@font-face {
+  font-family: "Roboto-Light";
+  src: url("../fonts/Roboto-Light.ttf");
+}
+@font-face {
+  font-family: "Roboto-Light";
+  src: url("../fonts/Roboto-Thin.ttf");
+}
+
+input:focus, select:focus {
+  outline:0px !important;
+  -webkit-appearance:none;
+  color:#4783c3;
+  -webkit-box-shadow: 0px 0px 3px 0px #c6ddea;
+  -moz-box-shadow:    0px 0px 3px 0px #c6ddea;
+  box-shadow:         0px 0px 3px 0px #c6ddea;
+border-color: #4783c3;
+}
+
+body {
+	position: absolute;
+	width: 100%;
+	// background: url(/assets/background.png) 0 0 repeat #f7f5f5;
+  font: 13px/20px "Lucida Grande", Tahoma, Verdana, sans-serif;
+  color: #404040;
+  background-color: #E3EBF0;
+
+}
+#clearfix_wrapper {
+	margin-left: auto;
+	margin-right: auto;
+}
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+ 
+.clearfix {
+    display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+    display: block;
+}
+ 
+* html .clearfix {
+    height: 1%;
+}
+
+
+canvas {
+  width: 100% ;
+  height: 100% ;
+}
+
+#title{
+  padding: 8px;
+  font-size: 20px;
+  font-family: 'Helvetica', 'Arial';
+  color: #acacac;
+}
+
+
+#gallery_container > div > div > i {
+  transition: opacity 0.5s ease-in;
+  -o-transition: opacity 0.5s ease-in;
+  -moz-transition: opacity 0.5s ease-in;
+  -webkit-transition: opacity 0.5s ease-in;
+  position: relative;
+  display: block;
+  top: -175px;
+  right: -20px;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+
+  
+}
+#gallery_container > div:hover > div > i {
+  opacity:1;
+  position: relative;
+  top: -175px;
+  right: -20px;
+  display:block;
+}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lanilabs</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= favicon_link_tag 'favicon.jpg' %>
+  <%= csrf_meta_tags %>
+  <script type="text/javascript" src="http://www.lanilabs.com/faye/client.js"></script>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>

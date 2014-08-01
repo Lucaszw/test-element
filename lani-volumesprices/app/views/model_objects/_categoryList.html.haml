@@ -1,0 +1,8 @@
+%div{:style => "float:left;"}
+  #categories_menu{:style=> "margin-top:40px;"}
+    %h2 Categories
+    - used_categories = Array.new
+    - @models.each do |model|
+      - if !used_categories.include? model.category
+        %h5= link_to model.category, model_objects_search_path(search: {:name => 0, :category => 1,:text => model.category}), :method => :post
+        - used_categories << model.category

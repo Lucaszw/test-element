@@ -1,0 +1,6 @@
+- categories = ["Art", "Collectibles", "Electronics", "Pets", "Accessories", "Pottery", "Sports", "Toys"]
+%div{:style => "float:left;"}
+  #categories_menu
+    %h2 Categories
+    - categories.each do |category|
+      %h5= link_to category, model_objects_search_path(search: {:name => 0, :category => 1,:text => category}), :method => :post

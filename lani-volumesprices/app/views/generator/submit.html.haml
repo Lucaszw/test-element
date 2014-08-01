@@ -1,0 +1,9 @@
+= @gcodefile
+%h3 Your download is being downloaded
+- modelcode = "download?gcode="+ @gcodefile
+= link_to "test", modelcode
+:coffee
+  $(document).ready ->
+  $.ajax
+    url: "generator/download?gcode= #{@gcodefile}"
+  return

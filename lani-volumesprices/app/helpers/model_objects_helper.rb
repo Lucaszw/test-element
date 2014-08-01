@@ -1,0 +1,2 @@
+module ModelObjectsHelper
+end
