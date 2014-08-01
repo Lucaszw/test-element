@@ -76,6 +76,17 @@ Level 3.
 	- Check whenever anything related to “git” is called on the server, or if a file was changed inside the main rails application (app folder, or config folder) , and then automatically call the process
 
 
+Once projects are completed : Late Night Research....
+All input on how to tackle the problem is great, even if its completely different then the stuff mentioned below :
 
+We just finished making the lanibox, however currently we have not decided on the best method to send the file to the printer from the site
+We have been thinking about sending the file line by line through push messages, where the lanibox and the user are subscribed to the same channel
+This will make sense later ^^^^...
+Or should we have the entire gcode sent immediately, and use parsing messages later on.
+
+Before we get started we need to decide how where going to store the files, ie should we save a each as a gcode file, and then immediately destroy after the print?
+(or should we base it on activity to the push server, ie 2-3 hours after print etc)
+
+Some files may need to be separated multiple time given how much configuration while printing is necessary...
 
 
