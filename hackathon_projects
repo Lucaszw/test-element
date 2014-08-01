@@ -87,6 +87,8 @@ Or should we have the entire gcode sent immediately, and use parsing messages la
 Before we get started we need to decide how where going to store the files, ie should we save a each as a gcode file, and then immediately destroy after the print?
 (or should we base it on activity to the push server, ie 2-3 hours after print etc)
 
-Some files may need to be separated multiple time given how much configuration while printing is necessary...
+Some files may need to be separated multiples time given how much configuration while printing is necessary, should we have limits...
+
+
 
 
