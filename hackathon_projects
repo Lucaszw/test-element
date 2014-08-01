@@ -1,0 +1,81 @@
+Project #1 :
+
+Using Sidekiq, track site uploads to a list file
+If you go to the following link you will see a textbox, button, and list
+http://www.lanilabs.com/sidekiq_test
+
+The website currently has sidekiq installed, along with working gcode generation however now we want to get these messages to display in the U.I .
+
+If you go into the SidekiqTestController you will see a line called :
+HardWorker.perform_async(xxxx) 
+where xxxx is the input 
+
+This calls a function located in :
+app/workers/hard_worker.rb,
+where all the work you will want to do is in the method :
+
+  def perform
+      puts "I was called?"
+  end
+
+Your objective is to save to a table everything that users have been doing on the site inside this perform method. There is a new table created called Messages that you can use to do this.
+
+Level 1.
+	-  When the user enters text in the textbox on the sidekiq test page, call HardWorker and tell him create a new message , the message should be saved as Message.text 
+	- The text page should see the new message and append the object to the top of the list on the test page
+
+Level 2.
+	- If you go to the generator controller , you will see the submit function has allot of work that it needs to do, it would be nice to be able to track changes to this page as the generator works to create the gcode
+	- Follow the action from top to bottom adding Hardworker messages after :
+		- The app has checked and found no errors to the stl
+		- The generator has finished converting all the flags the user submitted
+		- The generator begins the conversion process 
+		- The generator has finished making the gcode and readme
+		- Also if the user decides to print at UW instead, check when the user clicks "Purchase Model" and tell hardworker to display their username, the model , the price, and the volume
+	- The above shouldn't require much work so long as level 1 is completed.
+	- But what would be nice is if the page updated automatically once the hardworker was called
+	- If you press the submit message you will see a alert triggered from ActionController::Live. Get hardworker to call an action in the sidekiq test controller called "events" , using response.stream.write , write the latest message to the board. 
+	- If you open "sidekiq_test.js.coffee" you will see an example of how the actions are sent
+
+Level 3.
+	- The current price generation method on the site can be very slow, as it requires the model to be read 3 times...
+	- Since the user only needs to upload the model once, it would be nice if the gcode generation could be done in the background (ie in the hardworker) . 
+	- When the user uploads an stl, send the file to the hardworker.
+	- Once the hardworker gets the file, tell it to process in a separate action
+
+
+Project #2 :
+
+Create a script to auto restart puma server when changes are uploaded to server
+
+When we push changes to the server from git , we have to currently manually restart puma like so:
+
+ps aux | grep puma
+kill -9 11206 // whatever process was identifies
+rvmsudo bundle exec puma -e development -d -b unix:///var/run/lanilabs.sock
+
+Since we are in development this can get really annoying
+
+Your objective is to create a quick shortcut to do this :
+
+Level 1.
+
+	- Create a script such that this can be done with one line , i.e. :
+>> restart_puma
+* You have asked to restart puma... !
+* Version 2.9.0 (ruby 2.1.0-p0), codename: Team High Five
+* Min threads: 0, max threads: 16
+* Environment: development
+* Listening on unix:///var/run/lanilabs.sock
+* Daemonizing...
+
+Level 2.
+	- Make the script automatically called every hour or so, (although this is not recommend in the real world its a good stepping point for level 3) .
+
+Level 3.
+	- Check whenever anything related to “git” is called on the server, or if a file was changed inside the main rails application (app folder, or config folder) , and then automatically call the process
+
+
+
+
+
