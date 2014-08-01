@@ -1,0 +1,14 @@
+<%= render template: "navbar/index" %>
+<%= form_for :user, url: {controller: "profiles" ,action: "create"} do |f| %>
+<h1 style="width:100px;">New : </h1>
+<%= f.label "Name :"%>
+  <%= f.text_field :name %>
+
+  <%= f.label "Password :"%>
+  <%= f.password_field :password %>
+
+  <%= f.label "Email :"%>
+  <%= f.text_field :email %>
+  
+  <%= f.submit %>
+<% end %>

@@ -1,0 +1,34 @@
+#canvasWrapper{:href => "#canvasBox"}
+  #canvasBox
+    #viewport
+    %h4{style: "text-align:center;"} scroll to zoom in and out
+    %h4{style: "text-align:center;"} click and drag to rotate
+    %h4{style: "text-align:center;"} right click to pan
+
+:coffee
+  $(document).ready ->
+
+    # renderer, loader, scene,
+    height = unless self is top then $(window).height()-120 else $(window).height()/2
+    width = unless self is top then $(window).width() else $(window).width()/2
+    window.renderer.setSize width, height
+    window.renderer.setClearColor 0xf1f1f1, 1
+    document.getElementById("viewport").appendChild window.renderer.domElement 
+
+    window.scene.remove(window.mesh)
+    
+
+    window.loader.load "#{model.stlfile.url}"
+    window.animate()
+    
+
+    $("#canvasWrapper").fancybox(
+      afterShow: ->
+        window.controls.enabled = true
+        window.controls.rightClick(true)
+      afterClose: ->
+        window.controls.rightClick(false)
+        window.controls.enabled = false
+        return
+
+    ).trigger('click')

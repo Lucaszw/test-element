@@ -1,0 +1,72 @@
+= stylesheet_link_tag "categories"
+= javascript_include_tag "model_objects/menu_jquery"
+= stylesheet_link_tag "font-awesome.min"
+
+- categories = ["Art", "Collectibles", "Electronics", "Pets", "Accessories", "Pottery", "Sports", "Toys"]
+
+#cssmenu
+  .row
+    .col-lg-12
+      = form_for :search, :url => model_objects_search_path, :html => {:id => "search_form"} do |f|
+        .input-group
+          = f.text_field :text , :value => "", :class => "form-control",:id => "search_field"
+          %span.input-group-btn{:onclick => " $('#search_form').submit();"}
+            %button.btn.btn-default{type: "button"}
+              %i#scrollbutton.fa.fa-search
+
+  %br/
+  #tagcloud
+    = link_to model_objects_search_path(search: {:name => 1, :category => 0,:text => "school"}), :method => :post do
+      .label.label-primary #school
+    = link_to model_objects_search_path(search: {:name => 1, :category => 0,:text => "magic"}), :method => :post do
+      .label.label-primary #magic
+    = link_to model_objects_search_path(search: {:name => 1, :category => 0,:text => "wonder"}), :method => :post do
+      .label.label-primary #wonder
+    = link_to model_objects_search_path(search: {:name => 1, :category => 0,:text => "toys"}), :method => :post do
+      .label.label-primary #toys
+    = link_to model_objects_search_path(search: {:name => 1, :category => 0,:text => "gifts"}), :method => :post do
+      .label.label-primary #gifts
+    = link_to model_objects_search_path(search: {:name => 1, :category => 0,:text => "food"}), :method => :post do
+      .label.label-primary #food
+  %br/
+  %ul
+    %li.first.has-sub.active{style: "margin-bottom:2px;"}
+      %a{href: "#", onclick: "return false;"}
+        %span
+          %span#scrollbutton.fa.fa-th-list
+          Categories
+      %ul
+        - k = 0
+        - categories.each do |category|
+          - if (k == 0)
+            %li.first
+              = link_to model_objects_search_path(search: {:name => 0, :category => 1,:text => category}), :method => :post, :html => {:href => "#", :onclick => "return false;"} do
+                %span
+                  = category
+          - elsif ( k== categories.count-1)
+            %li.last
+              = link_to model_objects_search_path(search: {:name => 0, :category => 1,:text => category}), :method => :post, :html => {:href => "#", :onclick => "return false;"} do
+                %span
+                  = category
+          -else 
+            %li
+              = link_to model_objects_search_path(search: {:name => 0, :category => 1,:text => category}), :method => :post, :html => {:href => "#", :onclick => "return false;"} do
+                %span 
+                  = category
+          - k += 1
+  %ul
+    %li.first
+      %a{href: "index.html", onclick: "return false;"}
+        %span
+          %i#scrollbutton.fa.fa-gift
+          Models
+    %li
+      %a{href: "#", onclick: "return false;"}
+        %span
+          %i#scrollbutton.fa.fa-print
+          Print
+    %li.last
+      %a{href: "#", onclick: "return false;"}
+        %span
+          %i#scrollbutton.fa.fa-credit-card
+          Store

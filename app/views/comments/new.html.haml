@@ -1,0 +1,38 @@
+#new_comment
+  - if @logged_in == true
+    = form_for :comments, url: {controller: "comments" ,action: "create"} do |f|
+      .header
+        %h2 New Comment :
+        = f.text_field :title
+      .content
+        %h2 Description :
+        = f.text_area :description
+        %br
+        %br
+        = f.hidden_field :model_id , :value => @model.id
+        = f.submit("Add comment")
+  - else
+    .header
+      Please login to leave a comment.
+      
+-# .new_comment_wrapper
+-#   - if @logged_in == true
+-#     %h1{style: "text-align:left;"} Add Comment :
+-#     = form_for :comments, url: {controller: "comments" ,action: "create"} do |f|
+-#       = f.label "Title :"
+-#       %br/
+-#       = f.text_field :title
+-#       %br/
+-#       = f.label "Description :"
+-#       %br/
+-#       = f.text_area :description
+-#       %br/
+-#       = f.hidden_field :model_id , :value => @model.id
+-#       %br/
+-#       %br/
+-#       %br/
+-#       = f.submit("Add comment")
+-#       - end
+-#       - else
+-#       %h1{style: "text-align:left;"} Please login to leave a comment.		
+

@@ -1,0 +1,92 @@
+= javascript_include_tag "home"
+= render template: "navbar/index"
+= stylesheet_link_tag "font-awesome.min"
+
+%br
+%div{:style => "text-align:center"}
+  - if @errors
+    %h2
+      %span.label.label-default.label-danger
+        Model malfunction. Please come back later once error is fixed
+      
+  = javascript_tag do
+    low_quality_price = #{@low_quality_price.to_json};
+    high_quality_price = #{@high_quality_price.to_json};
+    low_quality_volumes = #{@low_quality_volumes.to_json};
+    high_quality_volumes = #{@high_quality_volumes.to_json};
+    price   = [low_quality_price , high_quality_price]
+    volumes = [low_quality_volumes,high_quality_volumes]
+    
+  
+  %h2 Price:
+  %h3#price
+    
+  %h2 Volume:
+  %h3#volumes
+  
+  
+  .options{style: "width : 550px;text-align:center;"}
+    - title = ["material", "quality", "infill"]
+    - vals  = [["ABS","PC-ABS","PC"], ["Low","High"],["Sparse","Solid"]]
+    
+    - (0..2).each do |i|
+      .row
+        .col-lg-1
+          .input-group{style: "width:100px;text-align:left;"}
+            %span.input-group-addon
+              = title[i]
+            .input-group-btn
+              %button.btn.btn-default.dropdown-toggle{"id" => "#{title[i]}","data-toggle" => "dropdown", | 
+              type: "button", value: "#{vals[i][0]}"}
+                #{vals[i][0]}
+                %span.caret
+              %ul.dropdown-menu.dropdown-menu-right{role: "menu"}
+                - (0..vals[i].size).each do |j|
+                  %li
+                    %a.dropdown{href: "#", value: "#{title[i]}"} #{vals[i][j]}
+      %br
+  %button.btn.btn-primary.dropdown-toggle#submit_purchase
+    Purchase Model
+:coffee
+
+  $(document).ready -> 
+  
+    getPrice = -> 
+      # Check if high or low quality      
+      selected_quality = $("#quality").attr("value")
+      selected_infill = $("#infill").attr("value")
+      
+      i = 0
+      j = 0
+      
+      if selected_quality is "High"
+        i = 1
+      if selected_infill is "Solid"
+        j = 1
+      
+      $("#price").text( "$"+ (Math.floor(price[i][j])+ 0.99) )
+      $("#volumes").html( (volumes[i][j]).toFixed(2)+ " in"+"&#179;" )
+      
+    $(".dropdown").click ->
+      $("#"+$(this).attr('value')).html($(this).text() + \ 
+      " <span class=\"caret\"></span>")
+      $("#"+$(this).attr('value')).attr("value", $(this).text())
+      getPrice()
+    
+    $("#submit_purchase").click ->
+    
+      #return $.ajax({
+       # type: "POST",
+        #url: window.canvas_request,
+        #data: "modelid=" + modelid,
+        #dataType: "text",
+        #success: function(data) {
+         # alert("Email Sent!")
+        #},
+        #error: function(data) {
+         # alert("Email Failed!")
+        #}
+      #});
+    
+      
+    getPrice()
