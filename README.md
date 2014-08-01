@@ -2,6 +2,10 @@ lanilabs
 ========
 
 #Installation steps
+0. Pre-install
+1. Install ruby >= 2.0.0
+2. Install rails 4.0.0
+
 1. Configuration
 ```
 $ git clone git@github.com:lanilabs/lani.git
