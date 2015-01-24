@@ -1,8 +1,0 @@
-/tmp
-.DS_Store
-/log/*.log
-/config/database.yml
-/tmp/pids/server.pid
-/tmp/cache/assets/development/sprockets
-/log/development.log
-/public/system/*

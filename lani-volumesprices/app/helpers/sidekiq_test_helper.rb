@@ -1,2 +1,0 @@
-module SidekiqTestHelper
-end
